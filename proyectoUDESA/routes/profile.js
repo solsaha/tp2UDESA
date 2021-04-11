@@ -5,7 +5,7 @@ const loginController = require('../controllers/profileController')
 
 router.get('/', profileController.index);
 router.get('/id/:id', profileController.show); 
-  
+router.get('/id/:id', profileController.show); 
 
 
 module.exports = router;
