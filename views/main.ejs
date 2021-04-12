@@ -8,12 +8,12 @@
             <article>
                 <h2><%= buzos[i].nombre %> </h2>
                 <p>Nombre: <%=bandas[i].integrantes %></p>
-                <p>Talle: <a href="/bandas/genre/<%= bandas[i].genero%>"><%= bandas[i].genero%></a></p>
+                <p>Talle: <a href="/buzos/nombre/<%= buzos[i].nombre%>"><%= buzos[i].nombre%></a></p>
                 <p>Precio:</p>
                 <ul>
-                    <!-- Todo: final de la clase     -->
+           
                 </ul>
-                <iframe width="560" height="315" src='<%= bandas[i].video %>' title="YouTube video player"
+                <iframe width="560" height="315" src='<%= buzos[i].imagen %>' title="Imagen del buzo"
                     frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
                 
