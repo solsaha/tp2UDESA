@@ -3,7 +3,7 @@ const buzosController = {
     index: function(req, res){
         let listaBuzos = data.lista;
         //devuelve la lista de buzos
-        return res.render('listadoBandas', {bandas:listaBuzos, title:" todos los buzos"})
+        return res.render('listaBuzos', {buzos:listaBuzos, title:" todos los buzos"})
     },
     show: function(req,res){
         //devuelve 1 buzo
