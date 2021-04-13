@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const loginController = require('../controllers/editController')
+//const loginController = require('../controllers/editController')
 
-router.get('/', editController.index);
-router.get('/id/:id', editController.show); 
+//router.get('/', editController.index);
+//router.get('/id/:id', editController.show); 
   
 
 
