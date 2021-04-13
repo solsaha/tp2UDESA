@@ -7,7 +7,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 510,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoKauri.jpeg"
         },
         {
             id:2,
@@ -16,7 +16,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 490,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoGema.jpeg"
         },
         {
             id:3,
@@ -25,7 +25,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 500,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoJade.jpeg"
         },
         {
             id:4,
@@ -34,7 +34,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 460,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoAgata.jpeg"
         },
         {
             id:5,
@@ -43,7 +43,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 450,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoAmbar.jpeg"
         },
         {
             id:6,
@@ -52,7 +52,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 400,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoArte.jpeg"
         },
         {
             id:7,
@@ -61,7 +61,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 380,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoBonnie.jpeg"
         },
         {
             id:8,
@@ -79,7 +79,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 330,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoJackie.jpeg"
         },
         {
             id:10,
@@ -88,7 +88,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 350,
             //stock: ,
-            imagen:"/img/acdc."
+            imagen:"../proyectoUDESA/public/images/BuzoStar.jpeg"
         },
     ]
 }
