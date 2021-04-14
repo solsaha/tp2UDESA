@@ -1,8 +1,8 @@
 
-const recursoController = {
+const registerController = {
     show: function (req, res){
         return res.send(`registrate`)
     }, 
    
 }
-module.exports = recursoController;
+module.exports = registerController;

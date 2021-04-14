@@ -1,6 +1,6 @@
 let data = require('../data/buzos');
 
-const buzosController = {
+const productController = {
   
     show: function(req,res){
         //devuelve 1 buzo
@@ -19,7 +19,7 @@ const buzosController = {
 
 }
 
-module.exports = buzosController;
+module.exports = productController;
 
 
   
