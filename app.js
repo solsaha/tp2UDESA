@@ -8,7 +8,6 @@ var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
 const registerRouter = require ('./routes/register');
 const loginRouter = require ('./routes/login');
-//const editProfileRouter = require ('./routes/editprofile');
 const productRouter = require ('./routes/product');
 
 
@@ -28,7 +27,6 @@ app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/register', registerRouter); 
 app.use('/login', loginRouter);
-//app.use('/editprofile', editProfileRouter);
 app.use('/product', productRouter);
 
 

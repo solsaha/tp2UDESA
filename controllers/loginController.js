@@ -1,10 +1,9 @@
-const { router } = require('../app')
-const loginRouter = require('../routes/login') 
+let loginRouter = require ('../app/loginRouter')
 
-const recursoController = {
+const logController = {
     show: function (req, res){
         return res.send(`logueate`)
     }, 
    
 }
-module.exports = router
+module.exports = logController;

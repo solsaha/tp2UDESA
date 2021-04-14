@@ -1,4 +1,5 @@
 let data = require('../data/buzos');
+
 const buzosController = {
   
     show: function(req,res){

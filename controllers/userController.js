@@ -1,5 +1,3 @@
-const { router } = require('../app')
-const loginRouter = require('../routes/login') 
 
 const recursoController = {
     show: function (req, res){
@@ -7,4 +5,4 @@ const recursoController = {
     }, 
    
 }
-module.exports = router
+module.exports = recursoController ;
