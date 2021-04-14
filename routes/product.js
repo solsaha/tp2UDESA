@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const buzosController = require('../controllers/productController')
+const productController = require('../controllers/productController');
 
-router.get('/product', buzosController.index, function(req, res){ 
-return res.send (`Estás viendo nuestros buzos`)
-})
+ router.get('./routes/product', productController.index);
+
+
 
 
 module.exports = router;
