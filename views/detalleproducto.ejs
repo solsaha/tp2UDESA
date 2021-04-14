@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
+
+<!-- header -->
+<%- include('./partials/header') %>
+<!-- header -->
+
 <body>
     <h1> Listado de <%= title %>.</h1>
     
-        <%= for (let i = 0 i < buzos.length;i++) { %> 
+        <% for (let i = 0; i < buzos.length; i++) { %> 
             <article>
                 <h2><%= buzos[i].nombre %> </h2>
-                <p>Nombre: <%=buzos[i].integrantes %></p>
-                <p>Talle: <a href="/buzos/nombre/<%= buzos[i].nombre%>"><%= buzos[i].nombre%></a></p>
-                <p>Precio:</p>
+                <p>Talle <a href="/buzos/talle/<%= buzos[i].talle%>"><%= buzos[i].talle%></a></p>
+                <p><%= buzos[i].imagen %> </p>
                 <ul>
            
                 </ul>
@@ -23,6 +26,9 @@
 
         }
    
+<!-- footer -->
+<%- include('./partials/footer') %>
+<!-- /footer -->
 
 </body>
 </html>

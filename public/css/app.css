@@ -68,7 +68,7 @@ hr {
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color:black ;
 }
 
 .main-header_home-link,
@@ -80,6 +80,7 @@ hr {
   font-size: 1.5em;
   margin-top: 20px;
   text-align: center;
+  color: blanchedalmond;
 }
 
 .search-form {
@@ -125,6 +126,11 @@ hr {
 .main-navbar {
   margin-top: 20px;
   display: none;
+}
+
+.main-navbar a {
+color: blanchedalmond;
+  
 }
 
 .left-navbar,
