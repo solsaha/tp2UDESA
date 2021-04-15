@@ -8,7 +8,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 510,
-            imagen:"images/BuzoKauri.jpeg"
+            imagen:"/images/BuzoKauri.jpeg"
         },
         {
             id:2,
@@ -16,7 +16,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 490,
-            imagen:"images/BuzoGema.jpeg"
+            imagen:"/images/BuzoGema.jpeg"
         },
         {
             id:3,
@@ -24,7 +24,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 500,
-            imagen:"images/BuzoJade.jpeg"
+            imagen:"/images/BuzoJade.jpeg"
         },
         {
             id:4,
@@ -40,7 +40,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 450,
-            imagen:"images/BuzoAmbar.jpeg"
+            imagen:"/images/BuzoAmbar.jpeg"
         },
         {
             id:6,
@@ -48,7 +48,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 400,
-            imagen:"images/BuzoArte.jpeg"
+            imagen:"/images/BuzoArte.jpeg"
         },
         {
             id:7,
@@ -56,7 +56,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 380,
-            imagen:"images/BuzoBonnie.jpeg"
+            imagen:"/images/BuzoBonnie.jpeg"
         },
         {
             id:8,
@@ -64,7 +64,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 360,
-            imagen:"images/"
+            imagen:"images/BuzoDiana.jpeg"
         },
         {
             id:9,
@@ -72,7 +72,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 330,
-            imagen:"images/BuzoJackie.jpeg"
+            imagen:"/images/BuzoJackie.jpeg"
         },
         {
             id:10,
@@ -80,7 +80,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 350,
-            imagen:"images/BuzoStar.jpeg"
+            imagen:"/images/BuzoStar.jpeg"
         },
     ]
 }
