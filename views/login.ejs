@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/head') %>
-	<!-- footer -->
+<%- include('./partials/header') %>
+	
 <body>
-<form>
-	<label>Nombre:</label>
+<form action="" method="GET">
+<li>
+	<label>Nombre de usuario:</label>
 	<input type=“text” name=“nombre-usuario”>
-	<label>Email:</label>
-	<input type=“email” name=“mail”>
+	
 	<label>Contraseña:</label>
 	<input type="password" name="contraseña">
-	<label>Fecha de nacimiento:</label>
-	<input type="date" name="nacimiento">
-	<label>Edad:</label>
-	<input type="number" name="Edad">
+	
+	<form action="" method="post">
+		<button class="logout" type="submit">
+			Cerrar sesión <i class="fas fa-sign-in-alt"></i>
+		</button>
+	</form>
+</li> 
 
 </form>
 
@@ -21,6 +24,6 @@
 </body>
 
 	<%- include('./partials/footer') %>
-	<!-- /footer -->
+	
 </body>	
 </html>
