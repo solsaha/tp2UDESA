@@ -2,32 +2,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/css/bootstrap-grid.min.css">
 	<!-- Own Stylesheet -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Open+Sans:wght@300&family=Quicksand&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/app.css">
     <title>Buzos</title>
 
 	<header class="main-header">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="img-logo">
+				<div class="img-logo col-2 col-md-3">
 			<!--	<a href="index.html" class="main-header_home-link"> -->	
-						<img src="images/LogoSAFUL.jpeg">
+						<img src="/images/LogoSAFUL.jpeg">
 					</a>
 				</div>
 	
-				<div class="col-7 col-md-6">
+				<div class="col-7 col-md-5">
 					<form action="search-results.html" method="GET" class="search-form">
 						<input type="text" name="search" placeholder="Buscá tu buzo" class="search-form_input">
 						<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
 					</form>
 				</div>
 	
-				<div class="col-12 col-md-4">
+			<!--	<div class="col-12 col-md-4">
 					<a class="main-header_credit-link">	
 						La mejor selección de hoodies
 					</a>
-				</div>
+				</div>-->
 			</div>
 	
 			<button class="btn-toggle-navbar">
@@ -35,10 +37,7 @@
 			</button>
 	
 			<nav class="main-navbar">
-				<ul class="left-navbar">
-					<li><a href="/">Todos los buzos</a></li>
-					<!-- solo logueado <li><a href="">Cargar productos</a></li> -->
-				</ul>
+
 	
 				<ul class="right-navbar">
 					<!-- Solo logueado <li><a href="profile.html">
@@ -53,8 +52,17 @@
 						</form>
 					</li> -->
 					<li>
+						<a href="/">Todos los buzos</a>
+					</li>
+					<li>
+						<a href="">|</a>
+					</li>
+					<li>
 						<a href="/register">Registrate <i class="far fa-address-card"></i>
 						</a>
+					</li>
+					<li>
+						<a href="">|</a>
 					</li>
 					<li>
 						<a href="/login">Logueate <i class="fas fa-sign-in-alt"></i></a>

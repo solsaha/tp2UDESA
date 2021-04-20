@@ -69,7 +69,6 @@ hr {
 
 .img-logo {
  align-items: center;
- width: 600px;
  
 }
 
@@ -274,7 +273,13 @@ color: blanchedalmond;
 .buzosTitle {
  padding-left: 6.6%;
  padding-top: 2%;
+ font-family: 'Dosis', sans-serif;
 }
+.products-title{
+  font-family: 'Quicksand', sans-serif;
+  text-decoration: underline var(--gray);
+ }
+  
 
 /*====== Footer ======*/
 .main-footer {
@@ -296,6 +301,7 @@ color: blanchedalmond;
   color: var(--gray);
   font-size: 2.0em;
   font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer-data p {
