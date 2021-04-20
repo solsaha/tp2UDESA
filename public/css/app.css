@@ -66,6 +66,13 @@ hr {
 
 
 /*====== Main Header ======*/
+
+.img-logo {
+ align-items: center;
+ width: 600px;
+ 
+}
+
 .main-header {
   padding: 15px 0;
   background-color:black ;
@@ -178,6 +185,7 @@ color: blanchedalmond;
   font-size: 2.4em;
   font-weight: 400;
   color: var(--gray);
+  text-align: center;
 }
 
 .product-box {
@@ -316,7 +324,7 @@ color: blanchedalmond;
 }
 
 .product-detail-img {
-  width: 70%;
+  width: 30%;
   display: block;
   margin: auto;
 }

@@ -6,19 +6,26 @@
 <!-- header -->
 
 <body>
-    <h1> Listado de <%= title %>.</h1>
     
         <% for (let i = 0; i < buzos.length; i++) { %> 
-            <article>
-                <h2><%= buzos[i].nombre %> </h2>
-                <p>Talle <a href="/buzos/talle/<%= buzos[i].talle%>"><%= buzos[i].talle%></a></p>
-                <p><%= buzos[i].imagen %> </p>
-                <ul>
-           
-                </ul>
-                <iframe width="560" height="315" src='<%= buzos[i].imagen %>' title="Imagen del buzo"
+            <article class="container products-wrapper">
+                <h2 class= products-title ><%= buzos[i].nombre %> </h2>
+                
+               
+            	<div class="product-detail">
+                    <div class="row">
+                        <article class="col-12 col-lg-8 product-detail-info">
+                            <img src="<%= buzos[i].imagen %> " alt="" class="product-detail-img">
+                            <p class="product-detail-description">
+                                Descripción corta del producto..</p>
+                                <p class= "product-detail-description" >Talle <a href="/buzos/talle/<%= buzos[i].talle%>"><%= buzos[i].talle%></a></p> 
+                                 <form class="form" action="" method="POST">
+                    <input class="form-input" type="text" value="" placeholder="Agregar comentario">
+                    <button type="submit" class="buy-now-button"> Agrega tu comentario</button>
+                </form> </div>
+            <!-- <iframe width="560" height="315" src='<%= buzos[i].imagen %>' title="Imagen del buzo"
                     frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+                    allowfullscreen></iframe> -->
                 
             </article>
         <% } %> 
