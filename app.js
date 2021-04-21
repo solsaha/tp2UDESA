@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var mainRouter = require('./routes/main');
-// var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/users');
 const registerRouter = require ('./routes/register');
 const loginRouter = require ('./routes/login');
 const productRouter = require ('./routes/product');
