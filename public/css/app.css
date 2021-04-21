@@ -449,6 +449,18 @@ color: blanchedalmond;
 }
 
 /*====== Formularios ======*/
+.formulario {
+align-items: center;
+}
+
+.login {
+ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; 
+ width: 100%;
+ background-color: black;
+ color: white;
+}
+
+
 .form-label {
   display: inline-block;
   font-size: 1.6em;
@@ -458,7 +470,7 @@ color: blanchedalmond;
 .form-input {
   display: block;
   width: 100%;
-  height: 45px;
+  height: 30px;
   margin-bottom: 15px;
   font-size: 1.5em;
   border-radius: 8px;

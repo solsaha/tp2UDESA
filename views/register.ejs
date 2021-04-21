@@ -4,28 +4,34 @@
 <%- include('./partials/header') %>
 	
 <body>
-<form action="" method="GET">
-<li>
-	<label>Nombre de usuario:</label>
-	<input type=“text” name=“nombre-usuario”>
-	<label>Email:</label>
-	<input type=“email” name=“mail”>
-	<label>Contraseña:</label>
-	<input type="password" name="contraseña">
-    <label>Fecha de nacimiento:</label>
-	<input type="date" name="nacimiento">
-	<label>Edad:</label>
-    <input type="number" name="edad">
+		<div class="container products-wrapper">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="products-title">Registrate</h2>
+				</div>
+<article class="formulario">			
+	<form action="" method="GET">
+	<li>
+	<label class="form-label">Nombre de usuario:</label>
+	<input class="form-input" type=“text” name=“nombre-usuario”>
+	<label class="form-label">Email:</label>
+	<input class="form-input" type=“email” name=“mail”>
+	<label class="form-label">Contraseña:</label>
+	<input class="form-input" type="password" name="contraseña">
+    <label class="form-label">Fecha de nacimiento:</label>
+	<input class="form-input" type="date" name="nacimiento">
+	<label class="form-label">Edad:</label>
+    <input class="form-input" type="number" name="edad">
 	
 	<form action="" method="post">
-		<button class="register" type="submit">
+		<button class="login" type="submit">
 			Crear cuenta <i class="fas fa-sign-in-alt"></i>
 		</button>
 	</form>
 </li> 
 
 </form>
-
+</article>
 
 </body>
 
