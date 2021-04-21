@@ -162,6 +162,10 @@ color: blanchedalmond;
   border-bottom: solid 1px var(--gray);
 }
 
+.left-navbar{
+  margin-left: 5.3%;
+}
+
 
 
 /*====== Banner ======*/
@@ -201,6 +205,9 @@ color: blanchedalmond;
 
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
+}
+.product-box_image img {
+ height: 50vh;
 }
 
 .product-box_data {
@@ -565,4 +572,9 @@ textarea.form-input {
     font-size: 7px;
     margin: auto;
   }
+}
+@media (max-width: 500px) {
+.product-box_image img {
+  height: auto;
+ }
 }
