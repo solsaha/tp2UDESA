@@ -357,6 +357,9 @@ color: blanchedalmond;
   padding: 15px 15px 15px 40px;
   font-size: 1.8em;
   line-height: 1.5;
+  background-color: white;
+  width: 25%;
+  text-align: left;
 }
 
 .product-detail-price {
