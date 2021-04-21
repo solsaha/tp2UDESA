@@ -32,7 +32,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 460,
-            imagen:"images/BuzoAgata.jpeg"
+            imagen:"/images/BuzoAgata.jpeg"
         },
         {
             id:5,
