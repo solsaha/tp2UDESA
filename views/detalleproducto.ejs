@@ -11,22 +11,62 @@
             <article class="container products-wrapper">
                 <h2 class= products-title ><%= buzos[i].nombre %> </h2>
                 
-               
-            	<div class="product-detail">
-                    <div class="row">
-                        <article class="col-12 col-lg-8 product-detail-info">
-                            <img src="<%= buzos[i].imagen %> " alt="" class="product-detail-img">
-                            <p class="product-detail-description">
+            <!-- product detail -->
+            <div class="container products-wrapper">
+                <div class="d-flex align-items-center">
+                    <h2 class="products-title">Nombre del producto</h2> 
+                    <p class="product-detail-description">
+                        <a href="productadd.ejs">Editar</a>
+                    </p>
+                </div>
+            <div class="product-detail">
+                <div class="row">
+                    <article class="col-12 col-lg-8 product-detail-info">
+                    <img src="<%= buzos[i].imagen %> " alt="" class="product-detail-img">
+                    <p class="product-detail-description">
                                 Descripción corta del producto..</p>
                                 <p class= "product-detail-description" >Talle <a href="/buzos/talle/<%= buzos[i].talle%>"><%= buzos[i].talle%></a></p> 
                                  <form class="form" action="" method="POST">
-                                    <div class="col-12 col-lg-4">
+                    </article>               
+                    <div class="col-12 col-lg-4">
                                         <section class="comments">
                                             <article>
                                                 <img src="https://via.placeholder.com/35" alt="">
                                                 <div class="data">
                                                     <p class="user">
-                                                    <strong> <a href="user.ejs">Nombre usuario: </a> </strong>
+                                                    <strong> <a href="user.ejs">Sol Saha: </a> </strong>
+                                                     Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
+                                                </div>
+                                            </article>
+                                            <article>
+                                                <img src="https://via.placeholder.com/35" alt="">
+                                                <div class="data">
+                                                    <p class="user">
+                                                    <strong> <a href="user.ejs">Magalí Parra </a> </strong>
+                                                     Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
+                                                </div>
+                                            </article>
+                                            <article>
+                                                <img src="https://via.placeholder.com/35" alt="">
+                                                <div class="data">
+                                                    <p class="user">
+                                                    <strong> <a href="user.ejs">Micalea Salas </a> </strong>
+                                                     Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
+                                                </div>
+                                            </article>
+                                            <article>
+                                                <img src="https://via.placeholder.com/35" alt="">
+                                                <div class="data">
+                                                    <p class="user">
+                                                    <strong> <a href="user.ejs">Pablo </a> </strong>
+                                                     Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
+                                                </div>
+                                            </article>
+                                            <article>
+                                                <img src="https://via.placeholder.com/35" alt="">
+                                                <div class="data">
+                                                    <p class="user">
+                                                    <strong> <a href="user.ejs">Juan </a> </strong>
                                                      Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
                                                 </div>
                                             </article>
