@@ -36,7 +36,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 460,
             imagen:"/images/BuzoAgata.jpeg",
-            descripcion: "BBuzo sin capucha comodo y fresco, perfecto para estar en casa."
+            descripcion: "Buzo sin capucha comodo y fresco, perfecto para estar en casa."
         },
         {
             id:5,
