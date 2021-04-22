@@ -510,7 +510,8 @@ textarea.form-input {
 }
 
 .foto-perfil{
-  border-radius: 50%;
+  border-radius: 90%;
+  width: 70%;
 }
 
 .main-title{
@@ -519,7 +520,7 @@ textarea.form-input {
 }
 
 .btn{
-  background-color: #1259c3;
+  background-color: black;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
