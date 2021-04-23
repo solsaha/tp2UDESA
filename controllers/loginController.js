@@ -6,4 +6,6 @@ const logController = {
     }, 
    
 }
+
+
 module.exports = logController;

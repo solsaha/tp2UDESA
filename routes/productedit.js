@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
+//const productEditController = require('../controllers/productEditController')
+
 
 router.get('/', function(req, res){
-    res.render('register')
+    return res.render('productedit')
 })
 
-  
 
 
 module.exports = router;
