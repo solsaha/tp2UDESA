@@ -9,7 +9,7 @@ let buzos = {
             talle: "1 , 2 , 3",
             precio: 510,
             imagen:"/images/BuzoKauri.jpeg",
-            descripcion: "Buzo corto comodo para todas las estaciones , adorado por nuestros clientes."
+            descripcion: "Buzo corto comodo para todas las estaciones, adorado por nuestros clientes."
         },
         {
             id:2,
@@ -71,7 +71,7 @@ let buzos = {
             marca: "SAFUL",
             talle: "1 , 2 , 3",
             precio: 360,
-            imagen:"images/BuzoDiana.jpeg",
+            imagen:"/images/BuzoDiana.jpeg",
             descripcion: "Buzo liso corto blanco, totalmente combinable."
         },
         {
