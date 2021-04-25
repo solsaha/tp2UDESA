@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header -->
+<%- include('./partials/header') %>
+<!-- header -->
+<body>
+    <div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Agregar productos</h2>
+			</div>
+			
+			
+                <article class="formulario">			
+                    <form action="" method="GET">
+                    <li>
+                    <label class="form-label">Nombre del producto:</label>
+                    <input class="form-input" type=“text” name=“nombre-usuario”>
+                    <label class="form-label">Id:</label>
+                    <input class="form-input" type=“number” name=“id”>
+                    <label class="form-label">Adjuntar imagen:</label>
+                    <input class="form-input" type="image" name="imagen">
+                    <label class="form-label">Categoría:</label>
+                    <input class="form-input" type="text" name="categoria">
+                
+                    
+                    <form action="" method="post">
+                        <button class="login" type="submit">
+                            Add product <i class="fas fa-sign-in-alt"></i>
+                        </button>
+                    </form>
+                </li> 
+                
+                </form>
+            </article>
+        </div>
+    </div>
+		
+
+            	<!-- footer -->
+	<%- include('./partials/footer') %>
+	<!-- /footer -->
+</body>
+
+</html>

@@ -183,6 +183,12 @@ color: blanchedalmond;
 .products-wrapper {
   margin-top: 30px;
   margin-bottom: 30px;
+  
+}
+
+.products-wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .products-title {
@@ -585,3 +591,4 @@ textarea.form-input {
   height: auto;
  }
 }
+

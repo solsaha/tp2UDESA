@@ -10,10 +10,16 @@
         <% for (let i = 0; i < buzos.length; i++) { %> 
             <article class="container products-wrapper">
                 <h2 class= products-title ><%= buzos[i].nombre %> </h2>
+                <div class="products-wrap"> 
+                    <p class="product-detail-description">
+                    <a href="/productedit">Editar producto</a>
+                </p>
                 <p class="product-detail-description">
                     <a href="/users">Agregar a mis productos</a>
                 </p>
+               </div>
             </article>
+          
                
                 
             <!-- product detail -->

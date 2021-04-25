@@ -1,5 +1,3 @@
-//objeto buzos con un array lista
-
 let buzos = {
     lista: [
         {

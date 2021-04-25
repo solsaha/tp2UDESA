@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-router.get('/', function(req, res){
-    res.render('register')
-})
+const registerController = require ("../controllers/registerController")
+
+router.get('/', registerController.show)
 
   
 

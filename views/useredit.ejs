@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/header') %>
+	
+<body>
+		<div class="container products-wrapper">
+			<div class="row">
+				<div class="col-12">
+					<h2 class="products-title">Editar usuario</h2>
+				</div>
+<article class="formulario">			
+	<form action="" method="GET">
+	<li>
+	<label class="form-label">Cambiar nombre</label>
+	<input class="form-input" type=“text” name=“nombre-usuario”>
+	<label class="form-label">Cambiar email  </label>
+	<input class="form-input" type=“email” name=“mail”>
+	<label class="form-label">Modificar fecha de nacimiento</label>
+	<input class="form-input" type="date" name="nacimiento">
+	<label class="form-label">Cambiar contraseña:</label>
+	<input class="form-input" type="password" name="contraseña">
+	<form action="" method="post">
+		<button class="login" type="submit">
+			Change <i class="fas fa-sign-in-alt"></i>
+		</button>
+	</form>
+</li> 
+
+</form>
+</article>
+</div>
+</div>
+
+
+	<%- include('./partials/footer') %>
+	
+</body>	
+</html>
