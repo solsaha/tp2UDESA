@@ -287,7 +287,8 @@ color: blanchedalmond;
   font-family: 'Quicksand', sans-serif;
   text-decoration: underline var(--gray);
  }
-  
+
+
 
 /*====== Footer ======*/
 .main-footer {
@@ -359,7 +360,7 @@ color: blanchedalmond;
   font-size: 1.8em;
   line-height: 1.5;
   background-color: white;
-  width: 25%;
+  width: 100%;
   text-align: left;
 }
 
