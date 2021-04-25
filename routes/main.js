@@ -11,6 +11,3 @@ router.get('/', mainController.index);
 module.exports = router;
 
 
-/* router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Página principal' });
-  }); */

@@ -1,7 +1,7 @@
 
 const registerController = {
     show: function (req, res){
-         res.render(`register`)
+         res.render('register')
     }, 
    
 }

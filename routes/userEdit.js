@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const userController = require ("../controllers/userController")
 
-router.get('/', function(req, res){
-    res.render('useredit')
-})
+router.get('/', userController.show)
 
   
 
