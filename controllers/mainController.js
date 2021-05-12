@@ -1,11 +1,18 @@
-let data = require('../data/buzos');
+const db = require('../database/models');
+
 const mainController = {
     index: function(req, res){
-        let listaBuzos = data.lista;
-        //devuelve la lista de buzos
-        res.render('index', {buzos:listaBuzos, title:"todos los buzos"})
-    },
-  
+        
+        db.Buzos.findAll()
+            .then( data => {
+                return res.render('index', { buzos: data })
+            })
+            .catch(error =>{
+                console.log(error);
+            })
+    }   
+
+
 }
 
 module.exports = mainController;
