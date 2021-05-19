@@ -18,7 +18,7 @@ module.exports = function(sequielize, dataTypes){
         },
     
         coment_text:{
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         userId:{
             type: dataTypes.INTEGER,

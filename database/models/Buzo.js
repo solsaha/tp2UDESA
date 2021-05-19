@@ -21,7 +21,7 @@ module.exports = function(sequelize, dataTypes){
         },
     
         comentario:{
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         userId:{
             type: dataTypes.INTEGER,

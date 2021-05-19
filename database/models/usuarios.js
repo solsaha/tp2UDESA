@@ -11,20 +11,20 @@ module.exports = function(sequelize, dataTypes){
             type: dataTypes.INTEGER,
         },
         password:{
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         nombre:{
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         fechaDeNaciemiento:{
             type: dataTypes.DATE,
         },
     
         edad:{
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
         email:{
-            type: dataTypes.VARCHAR,
+            type: dataTypes.STRING,
         },
     }
 
