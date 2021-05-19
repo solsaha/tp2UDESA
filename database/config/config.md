@@ -1,4 +1,3 @@
-// CAmbiar extensión por .js y configurar las credenciales en develop para la db
 module.exports = {
   "development": {
     "username": "root",
