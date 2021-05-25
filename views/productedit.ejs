@@ -4,15 +4,17 @@
 <%- include('./partials/header') %>
 <!-- header -->
 <body>
+
     <div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Agregar productos</h2>
+              <!--<a href="/productedit">Buzos nuevos</a>-->  
 			</div>
 			
 			
                 <article class="formulario">			
-                    <form action="" method="GET">
+                    <form action="/buzos/store" method="POST">
                     
                     <label class="form-label">Nombre del producto:</label>
                     <input class="form-input" type=“text” name=“nombre-usuario”>
@@ -28,7 +30,7 @@
                     <input class="form-input" type="text" name="categoria">
                 
                     
-                    <form action="" method="post">
+                    <form action="" method="POST">
                         <button class="login" type="submit">
                             Add product <i class="fas fa-sign-in-alt"></i>
                         </button>
