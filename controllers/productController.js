@@ -19,7 +19,7 @@ const productController = {
         },
 
         new: function(req, res){
-            //últimas 5 buzos ordenadas según su fecha de lanzamiento. Cada título de buzo deberá ser un hipervínculo para ver el detalle del mismo.
+         
             db.Buzo.findAll({
                order: [
                    ['fecha_creacion', 'DESC']
@@ -38,8 +38,7 @@ const productController = {
             let infoABuscar = req.query.search; //obtenemos la info de la querystring
     
             db.Movie.findAll({
-                //SELECT * FROM movies
-                //WHERE title LIKE "%potter%"
+                
                 where: [
                     { title: {[op.like]: '%'+infoABuscar+'%'}}
                 ]})
@@ -63,23 +62,22 @@ const productController = {
         },
 
         store: function(req, res){
-            //Método para guardar nueva película.
-            //1) Obtener datos del formulario
+            
             let data = req.body;
             
-            //2)Crear pelicula nueva.
+        
             let buzo = {
-                title: data.id,            
-                rating: data. image,
-                awards: data.nombre_producto,
+                id_buzo: data.id,            
+                imagen: data. image,
+                nombre_producto: data.nombre_producto,
                 fecha_creacion: data.release_date,
-                length: data.comentario,
-                genre_id: data.userId
+                comentario: data.comentario,
+                user_id: data.userId
             }
-            //3)Guardar película
+           
             db.Buzo.create(buzo)
                 .then( (buzoCreado) => {
-            //4)Redirección
+            
                     return res.redirect('/');
                 })
                 .catch(error => {
