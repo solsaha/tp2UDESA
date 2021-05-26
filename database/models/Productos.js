@@ -34,9 +34,9 @@ module.exports = function(sequelize, dataTypes){
         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.        
     }
 
-   const Buzos = sequelize.define(alias, cols, config);
+   const Productos = sequelize.define(alias, cols, config);
 
-   return Buzos;
+   return Productos;
 }
 
     

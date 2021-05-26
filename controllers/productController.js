@@ -61,18 +61,18 @@ const productController = {
                 })
         },
 
-        store: function(req, res){
+       /*  store: function(req, res){
             
             let data = req.body;
             
         
             let buzo = {
-                id_buzo: data.id,            
+                id: data.id,            
                 imagen: data. image,
                 nombre_producto: data.nombre_producto,
                 fecha_creacion: data.release_date,
                 comentario: data.comentario,
-                user_id: data.userId
+                userId: data.userId
             }
            
             db.Buzo.create(buzo)
@@ -100,7 +100,7 @@ const productController = {
                     console.log(error);
                 })
         }
-
+ */
 // const productController = {
   
 //     show: function(req,res){
