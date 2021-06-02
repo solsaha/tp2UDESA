@@ -1,7 +1,7 @@
 module.exports = function(sequielize, dataTypes){
 
     //Definir un alias.
-    let alias = 'coments'; //con este alias sequilize va a identificar internamente al archivo de modelo.
+    let alias = 'Coments'; //con este alias sequilize va a identificar internamente al archivo de modelo.
     
     //Describir la configuración de las columnas de la tabla
     let cols = {
@@ -27,7 +27,7 @@ module.exports = function(sequielize, dataTypes){
      let config = {
          table: 'coments',
          timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
-         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lougar de camelCase.
+         underscored: false, //Si los nombres de las columnas en la db tienen guiones bajos en lougar de camelCase.
      }
      
     const Coment = sequielize.define(alias, cols, config);

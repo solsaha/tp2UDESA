@@ -1,7 +1,7 @@
 module.exports = function(sequelize, dataTypes){
 
     //Definir un alias.
-    let alias = 'productos'; //Con este alias sequelize va a identificar internamente al archivo de modelo.
+    let alias = 'Productos'; //Con este alias sequelize va a identificar internamente al archivo de modelo.
 
     //Describir la configuración de las columnas de la tabla
     let cols = {
@@ -31,7 +31,7 @@ module.exports = function(sequelize, dataTypes){
     let config = {
         tableName: 'productos', 
         timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
-        underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.        
+        underscored: false, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.        
     }
 
    const Productos = sequelize.define(alias, cols, config);

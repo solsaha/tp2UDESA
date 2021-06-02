@@ -6,9 +6,9 @@ const op = db.Sequelize.Op
 const mainController = {
     index: function(req, res){
         let id = req.params.id;
-        db.productos.findAll()
+        db.Productos.findAll()
             .then( data => {
-                return res.render('main', { title : 'Productos' , listaBuzos: data});
+                return res.render('index', { title : 'Productos' , listaBuzos: data});
             })
             .catch(error =>{
                 console.log(error);
