@@ -29,7 +29,7 @@
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 const op = db.Sequelize.Op;
-const users = db.User;
+const users = db.Usuarios;
 
 let registerController = {
     index: function(req, res){
