@@ -5,6 +5,45 @@ const users = db.Usuarios;
 
 let loginController = {
     index: function(req, res){
+        //Mostramos el form de login
+        return res.render('login');
+    },
+    login: function(req, res){
+        // Buscar el usuario que se quiere loguear.
+        db.Userarios.findOne({
+            where: [{email: req.body.email}]
+        })
+        .then( user => {
+            req.session.user = user;
+            console.log('en login controller');
+            console.log(req.session.user);
+
+            //Si tildó recordame => creamos la cookie.
+            if(req.body.rememberme != undefined){
+                res.cookie('userId', user.id, { maxAge: 1000 * 60 * 5})
+            }
+
+            return res.redirect('/');
+            
+        })
+        .catch( e => {console.log(e)})
+
+    },
+    logout: function(req,res){
+        //Destruir la sessión
+        req.session.destroy();
+
+        //Destruir la coockie
+         res.clearCookie('userId');
+        
+        //redireccionar a hone
+        return res.redirect('/')
+    }
+    
+}
+
+/* let loginController = {
+    index: function(req, res){
         //Control de acceso
         if(req.session.user != undefined){
             return res.redirect('/')
@@ -61,5 +100,5 @@ let loginController = {
     }
     
 }
-
+ */
 module.exports = loginController;

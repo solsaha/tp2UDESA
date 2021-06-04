@@ -60,7 +60,7 @@
 							</button>
 						</form>
 					</li> -->
-					<li>
+					<!-- <li>
 						<a href="/register">Registrate <i class="far fa-address-card"></i>
 						</a>
 					</li>
@@ -69,7 +69,16 @@
 					</li>
 					<li>
 						<a href="/login">Logueate <i class="fas fa-sign-in-alt"></i></a>
-					</li>
+					</li> -->
+					<% if(locals.user){ %>
+						<form action="/login/logout" method="POST">
+						  <button type="submit">Logout</button>
+						</form>
+					  <%} else {%>
+						<a href="/login">Ingresar</a>
+						<a href="/register">Registrate</a>
+					  <%}%>
+					  
 				</ul>
 				
 			</nav>
