@@ -27,7 +27,7 @@ const productController = {
                limit: 5,
             })
                 .then(data =>{
-                    return res.render('new', {Buzos: data, title: 'Nuevos'})
+                    return res.render('new', {Buzos: data, title: 'Novedades'})
                 })
                 .catch( error => {
                     console.log(error);
