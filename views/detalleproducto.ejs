@@ -7,11 +7,12 @@
 
 <body>
     
-        <% for (let i = 0; i < buzos.length; i++) { %> 
+        <% for (let i=0; i<buzos.length; i++) { %> 
             <article class="container products-wrapper">
-                <h2 class= products-title ><%= buzos[i].nombre %> </h2>
+                <h2 class= products-title ><%= buzos[i].nombre_producto %> </h2>
                 <div class="products-wrap"> 
                     <p class="product-detail-description">
+
                     <a href="/productedit">Editar producto</a>
                 </p>
                 <p class="product-detail-description">
@@ -19,7 +20,20 @@
                 </p>
                </div>
             </article>
-          
+
+
+            <!-- <ul>
+                <% for(let i=0; i<movies.length; i++){ %>
+                  <li>
+                    <a href="/movies/detail/<%= movies[i].id%>"><%= movies[i].title %></a>
+                    <p>Fecha de estreno: <%= movies[i].release_date %> </p> 
+                    <p>Premios: <%= movies[i].awards %>
+                    <p>Rating: <%= movies[i].rating %>
+                    </p>
+                  </li>
+                <% } %> 
+              </ul>
+           -->
                
                 
             <!-- product detail -->

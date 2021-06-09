@@ -9,9 +9,9 @@ const productController = {
     show: function(req, res){
         let id = req.params.id;
 
-        db.Buzo.findByPk(id)
+        db.Productos.findByPk(id)
             .then(data =>{
-                return res.render('index', { buzo: data });
+                return res.render('detalleproducto', { buzos: data });
             })
             .catch(error =>{
                 console.log(error);
@@ -20,21 +20,34 @@ const productController = {
 
         new: function(req, res){
          
-            db.Buzo.findAll({
+            db.Productos.findAll({
                order: [
                    ['fecha_creacion', 'DESC']
                ],
                limit: 5,
             })
                 .then(data =>{
-                    return res.render('new', {Buzos: data, title: 'Novedades'})
+                    return res.render('index', {buzos: data, title: 'Novedades'})
                 })
                 .catch( error => {
                     console.log(error);
                 })
         },
 
-        search: function(req, res){
+       
+        create: function(req, res){
+            //Mostrar formulario de carga de buzos
+            db.Productos.findAll()
+                .then( data => {
+                    return res.render('productedit', {buzos: data});
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+        },
+
+
+/*  search: function(req, res){
             let infoABuscar = req.query.search; //obtenemos la info de la querystring
     
             db.Movie.findAll({
@@ -48,18 +61,9 @@ const productController = {
                 .catch( error => {
                     console.log(error);
                 })
-        },
+        }, */
 
-        create: function(req, res){
-            //Mostrar formulario de carga de buzos
-            db.Buzo.findAll()
-                .then( data => {
-                    return res.render('productedit', {Buzo:data});
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-        },
+
 
        /*  store: function(req, res){
             
