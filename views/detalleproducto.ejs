@@ -12,7 +12,9 @@
                 <h2 class= products-title ><%= buzos[i].nombre_producto %> </h2>
                 <div class="products-wrap"> 
                     <p class="product-detail-description">
-
+                <p>Imagen: <%= buzos[i].image%></p>
+                <p>Fecha de creación: <%= buzos[i].fecha_creacion%></p>
+                <p>Comentario: <%= buzos[i].comentario %></p>
                     <a href="/productedit">Editar producto</a>
                 </p>
                 <p class="product-detail-description">
@@ -40,7 +42,7 @@
     
         
                
-            <div class="product-detail">
+            <!-- <div class="product-detail">
                 <div class="row">
                     <article class="col-12 col-lg-8 product-detail-info">
                     <img src="<%= buzos[i].imagen %> " alt="" class="product-detail-img">
@@ -103,7 +105,7 @@
     
 
     </div>
-    </div>
+    </div> -->
 
 <!-- footer -->
 <%- include('./partials/footer') %>
