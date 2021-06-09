@@ -13,9 +13,19 @@ const mainController = {
             .catch(error =>{
                 console.log(error);
             })
-    }   
-
-
+    }  ,
+    search:  function(req, res)({
+        let buscar = req.query.search;
+        db.Productos.findAll({
+            where:[
+                {title:{[op.like]:'%'+buscar+'%'}}
+            ]})
+            .then (data=> {
+                return res.render('index',{buzos:data});
+            })
+            .catch(error=>{
+                console.log(error);
+            })
 }
 
 module.exports = mainController;
