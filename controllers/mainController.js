@@ -18,10 +18,10 @@ const mainController = {
         let buscar = req.query.search;
         db.Productos.findAll({
             where:[
-                {title:{[op.like]:'%'+buscar+'%'}}
+                {nombre_producto:{[op.like]:'%'+buscar+'%'}}
             ]})
             .then (data=> {
-                return res.render('/partials/header',{ buzos : data });
+                return res.render('/partials/header',{ buzos: data });
             })
             .catch(error=>{
                 console.log(error);
