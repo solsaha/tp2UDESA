@@ -20,7 +20,7 @@ let registerController = {
        }
        users.create(user)
        .then( user => {
-        return res.redirect('/login')
+        return res.redirect('login')
        })
        .catch(e => {console.log(e)});
 
