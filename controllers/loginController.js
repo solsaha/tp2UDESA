@@ -28,6 +28,7 @@ let loginController = {
         })
         .catch( e => {console.log(e)})
 
+
     },
     logout: function(req,res){
         
