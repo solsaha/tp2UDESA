@@ -10,32 +10,27 @@
 				<div class="col-12">
 					<h2 class="products-title">Registrate</h2>
 				</div>
-				<% if(locals.errors) %>
-				{ %> <p class= “error”> <%= errors.message %> </p> <% } %>
+				<% if(locals.errors) {%>
+				 <p class= “error”> <%= errors.message %> </p>
+				<% } %>
 <article class="formulario">			
-	<form action="" method="POST">
+	<form method="POST" action="/register" enctype="multipart/form-data"> 
 	<label class="form-label">Nombre de usuario:</label>
 	<input class="form-input" type=“text” name=“nombre-usuario”>
 	<label class="form-label">Email:</label>
-	<input class="form-input" type=“email” name=“mail”>
+	<input class="form-input" type=“email” name="mail">
 	<label class="form-label">Contraseña:</label>
-	<input class="form-input" type="password" name="contraseña">
+	<input class="form-input" type="password" name="password">
     <label class="form-label">Fecha de nacimiento:</label>
 	<input class="form-input" type="date" name="nacimiento">
 	<label class="form-label">Edad:</label>
     <input class="form-input" type="number" name="edad">
-	<form method="POST" action="/register" enctype="multipart/form-data"> 
-
-		<input type="file" name="avatar"></form>
-	
-	<form action="" method="post">
+		<input type="file" name="avatar">
 		<button class="login" type="submit">
 			Crear cuenta <i class="fas fa-sign-in-alt"></i>
 		</button>
 	</form>
 
-
-</form>
 </article>
 </div>
 </div>

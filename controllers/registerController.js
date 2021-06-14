@@ -3,18 +3,18 @@ const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 const op = db.Sequelize.Op;
 const users = db.Usuarios;
-const multer = require('multer');
-const path  = require('path');
+
 
 let registerController = {
     index: function(req, res){
         //Mostrar el formulario de registro
         return res.render('register');
     },
-    store: function(req, res){ 
+     store: function(req, res){ 
+         
         let errors = {}
 
-        if(req.body.email == ""){
+        if(req.body.mail == ""){
             errors.message = "El email es obligatorio";
             res.locals.errors = errors;
             return res.render('register')
@@ -24,11 +24,6 @@ let registerController = {
             res.locals.errors = errors;
             return res.render('register')
          //Chequear que repetir contraseña no esté vacío   
-        } else if (req.body.retypePassword == ""){
-            errors.message = "Retype password es obligatorio";
-            res.locals.errors = errors;
-            return res.render('register')
-            //Una vez que tenemos la información completa entonces podemos pasar a chequear con base de datos
         } else {
             //Buscamos un usaurio en base al email ingresado.
             users.findOne({
@@ -48,28 +43,18 @@ let registerController = {
                         password: bcrypt.hashSync(req.body.password, 10), 
                         }
 
+                        users.create(user)
+                        .then( user => {
+                            return res.redirect('login')
+                        })
+                        .catch(e => {console.log(e)});
+                    }
+                });
+            }
+        },
 
-       users.create(user)
-       .then( user => {
-        return res.redirect('login')
-       })
-       .catch(e => {console.log(e)});
-
-    }
-    
-})
-
-
- var storage = multer.diskStorage({
-    destination: function (req, file, cd){
-        cb(null, path.join(__dirname, '../public/images/avatar'))
-    }, 
-        filename: (req, file, cb) => {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-    
-    }
-    })
-    
-    var upload = multer({ storage: storage })  
+           
+    };
+ 
 
 module.exports = registerController;
