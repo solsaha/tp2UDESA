@@ -7,7 +7,7 @@ const prodEditController = {
 
         db.Buzo.findByPk(id)
             .then(data =>{
-                return res.render('productedit', { buzo: data });
+                return res.render('productedit', { listaBuzos: data });
             })
             .catch(error =>{
                 console.log(error);
@@ -18,14 +18,12 @@ const prodEditController = {
             search: function(req, res){
                 let infoABuscar = req.query.search; //obtenemos la info de la querystring.
         
-                db.Buzo.findAll({
-                    //SELECT * FROM movies
-                    //WHERE title LIKE "%potter%"
+                db.Productos.findAll({
                     where: [
-                        { title: {[op.like]: '%'+infoABuscar+'%'}}
+                        { nombre_producto: {[op.like]: '%'+infoABuscar+'%'}}
                     ]})
                     .then( data => {
-                        return res.render('productedit',{buzos: data});
+                        return res.render('search',{listaBuzos: data});
                     })
                     .catch( error => {
                         console.log(error);
@@ -33,9 +31,9 @@ const prodEditController = {
             },
             create: function(req, res){
                 //Mostrar formulario para cargar buzos
-                db.Genre.findAll()
+                db.Productos.findAll()
                     .then( data => {
-                        return res.render('movieNew', {genres:data});
+                        return res.render('productedit', {listaBuzos:data});
                     })
                     .catch(error => {
                         console.log(error);

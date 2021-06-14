@@ -11,59 +11,26 @@ const productController = {
 
         db.Productos.findByPk(id)
             .then(data =>{
-                return res.render('detalleproducto', { buzos: data });
+                return res.render('detalleproducto', { listaBuzos: data });
             })
             .catch(error =>{
                 console.log(error);
             })
         },
 
-        new: function(req, res){
-         
-            db.Productos.findAll({
-               order: [
-                   ['fecha_creacion', 'DESC']
-               ],
-               limit: 5,
-            })
-                .then(data =>{
-                    return res.render('index', {buzos: data, title: 'Novedades'})
-                })
-                .catch( error => {
-                    console.log(error);
-                })
-        },
+       
 
        
         create: function(req, res){
             //Mostrar formulario de carga de buzos
             db.Productos.findAll()
                 .then( data => {
-                    return res.render('productedit', {buzos: data});
+                    return res.render('productedit', {listaBuzos: data});
                 })
                 .catch(error => {
                     console.log(error);
                 })
         },
-
-
-/*  search: function(req, res){
-            let infoABuscar = req.query.search; //obtenemos la info de la querystring
-    
-            db.Movie.findAll({
-                
-                where: [
-                    { title: {[op.like]: '%'+infoABuscar+'%'}}
-                ]})
-                .then( data => {
-                    return res.render('index',{buzos: data});
-                })
-                .catch( error => {
-                    console.log(error);
-                })
-        }, */
-
-
 
        /*  store: function(req, res){
             

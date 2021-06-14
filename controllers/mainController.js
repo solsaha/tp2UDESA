@@ -14,6 +14,22 @@ const mainController = {
                 console.log(error);
             })
     }  ,
+
+    new: function(req, res){
+         
+        db.Productos.findAll({
+           order: [
+               ['fecha_creacion', 'DESC']
+           ],
+           limit: 5,
+        })
+            .then(data =>{
+                return res.render('index', {listaBuzos: data, title: 'Novedades'})
+            })
+            .catch( error => {
+                console.log(error);
+            })
+    },
     search:  function(req, res){
         let buscar = req.query.search;
         db.Productos.findAll({

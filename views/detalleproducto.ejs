@@ -7,105 +7,37 @@
 
 <body>
     
-        <% for (let i=0; i<buzos.length; i++) { %> 
+        <% for (let i=0; i<listaBuzos.length; i++) { %> 
             <article class="container products-wrapper">
-                <h2 class= products-title ><%= buzos[i].nombre_producto %> </h2>
+                <h2 class= products-title ><%= listaBuzos[i].nombre_producto %> </h2>
                 <div class="products-wrap"> 
                     <p class="product-detail-description">
-                <p>Imagen: <%= buzos[i].image%></p>
-                <p>Fecha de creación: <%= buzos[i].fecha_creacion%></p>
-                <p>Comentario: <%= buzos[i].comentario %></p>
+                <p>Imagen: <%= listaBuzos[i].image%></p>
+                <p>Fecha de creación: <%= listaBuzos[i].fecha_creacion%></p>
+                <p>Comentario: <%= listaBuzos[i].comentario %></p>
                     <a href="/productedit">Editar producto</a>
                 </p>
                 <p class="product-detail-description">
-                    <a href="/users">Agregar a mis productos</a>
+                    <a href="/user">Agregar a mis productos</a>
                 </p>
                </div>
             </article>
 
-
-            <!-- <ul>
-                <% for(let i=0; i<movies.length; i++){ %>
-                  <li>
-                    <a href="/movies/detail/<%= movies[i].id%>"><%= movies[i].title %></a>
-                    <p>Fecha de estreno: <%= movies[i].release_date %> </p> 
-                    <p>Premios: <%= movies[i].awards %>
-                    <p>Rating: <%= movies[i].rating %>
-                    </p>
-                  </li>
-                <% } %> 
-              </ul>
-           -->
-               
-                
             <!-- product detail -->
     
         
-               
-            <!-- <div class="product-detail">
-                <div class="row">
-                    <article class="col-12 col-lg-8 product-detail-info">
-                    <img src="<%= buzos[i].imagen %> " alt="" class="product-detail-img">
-                    <p class="product-detail-description">
-                        Buzo corto cómodo para todas las estaciones , adorado por nuestros clientes.</p>
-                                <p class= "product-detail-description" >Talle <a href="/buzos/talle/<%= buzos[i].talle%>"><%= buzos[i].talle%></a></p> 
-                                 <form class="form" action="" method="POST">
-                    </article>               
-                    <div class="col-12 col-lg-4">
-                                        <section class="comments">
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="/">Sol: </a> </strong>
-                                                    Hermoso buzo, muy cómodo y fresco.</p>
-                                                </div>
-                                            </article>
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href= "/">Magali: </a> </strong>
-                                                    Buzo de muy buena calidad.</p>
-                                                </div>
-                                            </article>
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="/">Micalea: </a> </strong>
-                                                    Ideal para estar en casa!!</p>
-                                                </div>
-                                            </article>
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="/">Pablo </a> </strong>
-                                                    El buzo muy lindo, me encanto.Quiero ver mas como este.</p>
-                                                </div>
-                                            </article>
-                                          <!--  <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="user.ejs">Juan </a> </strong>
-                                                     Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
-                                                </div>
-                                            </article>  -->
+                 </article>  
                     <input class="form-input" type="text" value="" placeholder="Agregar comentario">
                     <button type="submit" class="buy-now-button"> Agrega tu comentario</button>
                 </form> </div>
-            <!-- <iframe width="560" height="315" src='<%= buzos[i].imagen %>' title="Imagen del buzo"
+            <iframe width="560" height="315" src='<%= listaBuzos[i].image %>' title="Imagen del buzo"
                     frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe> -->
+                    allowfullscreen></iframe> 
                 
             </article>
         <% } %> 
-    
-
     </div>
-    </div> -->
+    </div> 
 
 <!-- footer -->
 <%- include('./partials/footer') %>
