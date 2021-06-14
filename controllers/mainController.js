@@ -21,7 +21,7 @@ const mainController = {
                 {nombre_producto:{[op.like]:'%'+buscar+'%'}}
             ]})
             .then (data=> {
-                return res.render('/partials/header',{ buzos: data });
+                return res.render('resultados',{ listaBuzos: data });
             })
             .catch(error=>{
                 console.log(error);
