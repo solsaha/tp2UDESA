@@ -7,14 +7,16 @@
 
 <body>
     
-        <% for (let i=0; i<listaBuzos.length; i++) { %> 
+        
             <article class="container products-wrapper">
-                <h2 class= products-title ><%= listaBuzos[i].nombre_producto %> </h2>
+                <h2 class= products-title ><%= listaBuzos.nombre_producto %> </h2>
+                <a href="/">Home</a>
                 <div class="products-wrap"> 
                     <p class="product-detail-description">
-                <p>Imagen: <%= listaBuzos[i].image%></p>
-                <p>Fecha de creación: <%= listaBuzos[i].fecha_creacion%></p>
-                <p>Comentario: <%= listaBuzos[i].comentario %></p>
+                        <p><%= listaBuzos.id %></p>
+                <p><%= listaBuzos.image%></p>
+                <p>Fecha de creación: <%= listaBuzos.fecha_creacion%></p>
+                <p>Comentario: <%= listaBuzos.comentario %></p>
                     <a href="/productedit">Editar producto</a>
                 </p>
                 <p class="product-detail-description">
@@ -30,12 +32,17 @@
                     <input class="form-input" type="text" value="" placeholder="Agregar comentario">
                     <button type="submit" class="buy-now-button"> Agrega tu comentario</button>
                 </form> </div>
-            <iframe width="560" height="315" src='<%= listaBuzos[i].image %>' title="Imagen del buzo"
+            <!-- <iframe width="560" height="315" src='<%= listaBuzos.image %>' title="Imagen del buzo"
                     frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe> 
-                
+                 -->
+                 <form action="/detalleproducto/delete/<%= listaBuzos.id %>" method="POST">
+                    <button type="submit">Borrar</button>
+                  </form>
+                  <button> Modificar </button>
+              
             </article>
-        <% } %> 
+       
     </div>
     </div> 
 
