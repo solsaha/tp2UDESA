@@ -31,6 +31,14 @@ module.exports = function(sequielize, dataTypes){
      }
      
     const Coment = sequielize.define(alias, cols, config);
+
+   /*  Coments.associate = function(models){
+        Coments.hasMany(models.Productos,{
+         as:'productos',
+         foreignKey: 'productId'
+        })
+    } */
+ 
     
     return Coment;
     
