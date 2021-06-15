@@ -14,7 +14,7 @@ let registerController = {
          
         let errors = {}
 
-        if(req.body.mail == ""){
+        if(req.body.email == ""){
             errors.message = "El email es obligatorio";
             res.locals.errors = errors;
             return res.render('register')
