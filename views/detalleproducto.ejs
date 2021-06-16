@@ -7,14 +7,14 @@
 
 <body>
     
-        
+    <% for(let i=0; i<listaBuzos.length; i++){ %>
             <article class="container products-wrapper">
                 <h2 class= products-title ><%= listaBuzos.nombre_producto %> </h2>
                 <a href="/">Home</a>
                 <div class="products-wrap"> 
-                    <p class="product-detail-description">
-                        <p><%= listaBuzos.id %></p>
-                <p><%= listaBuzos.image%></p>
+                <p class="product-detail-description">
+                <p><%= listaBuzos.id %></p>
+                <img src="images/<%= listaBuzos[i].image %>" alt="Buzo Ambar">
                 <p>Fecha de creación: <%= listaBuzos.fecha_creacion%></p>
                 <p>Comentario: <%= listaBuzos.comentario %></p>
                     <a href="/productedit">Editar producto</a>
@@ -23,6 +23,7 @@
                     <a href="/user">Agregar a mis productos</a>
                 </p>
                </div>
+               <% } %>
             </article>
 
             <!-- product detail -->
