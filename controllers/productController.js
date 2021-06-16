@@ -11,6 +11,7 @@ const productController = {
 
         db.Productos.findByPk(id)
             .then(data =>{
+               
                 return res.render('detalleproducto', { listaBuzos: data });
             })
             .catch(error =>{

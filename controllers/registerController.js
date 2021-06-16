@@ -38,9 +38,11 @@ let registerController = {
                     } else {
                         // Si el email está libre recién ahora podemos guardar un usuario en la db
                         let user = {
-                        name : req.body.name,
+                        name : req.body.nombre,
                         email: req.body.email,
                         password: bcrypt.hashSync(req.body.password, 10), 
+                        fechaDeNacimiento: req.body.nacimiento,
+                        edad: req.body.edad, 
                         }
 
                         users.create(user)
