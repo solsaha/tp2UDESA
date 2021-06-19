@@ -1,8 +1,6 @@
-CREATE DATABASE  IF NOT EXISTS `proyectoIntegrador` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `proyectoIntegrador`;
 -- MySQL dump 10.13  Distrib 8.0.20, for macos10.15 (x86_64)
 --
--- Host: localhost    Database: proyectoIntegrador
+-- Host: 127.0.0.1    Database: proyectoIntegrador
 -- ------------------------------------------------------
 -- Server version	5.7.32
 
@@ -62,6 +60,8 @@ CREATE TABLE `productos` (
   `fecha_creacion` date NOT NULL,
   `comentario` varchar(400) DEFAULT NULL,
   `userId` int(10) unsigned NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
   KEY `userId` (`userId`),
   CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `usuarios` (`id`)
@@ -74,7 +74,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'BuzoKauri.jpeg','Buzo Kauri','2021-02-14','Buzo corto comodo para todas las estaciones , adorado por nuestros clientes.',1),(2,'BuzoGema.jpeg','Buzo Gema','2021-02-14','Buzo sin capucha, perfecto para usar con todo.',2),(3,'BuzoJade.jpeg','Buzo Jade','2020-12-25','Buzo oversize con estampa en la espalda \"Everyone knows my path better than I do\".',1),(4,'BuzoAgata.jpeg','Buzo Agata','2021-03-16','Buzo sin capucha comodo y fresco, perfecto para estar en casa.',3),(5,'BuzoAmbar.jpeg','Buzo Ambar','2020-11-20','Buzo claro con frase en la manga.',4),(6,'BuzoArte.jpeg','Buzo Arte','2020-12-25','Buzo que hace referencia a su nombre, original y el mas elegido.',5),(7,'BuzoBonnie.jpeg','Buzo Bonnie','2021-02-14','Buzo liso oscuro con capucha.',5),(8,'BuzoDiana.jpeg','Buzo Diana','2020-12-25','Buzo liso corto blanco, totalmente combinable.',3),(9,'BuzoJackie.jpeg','Buzo Jackie','2021-03-16','Buzo unico verde \"Rusty\".',2),(10,'Buzo.jpeg','Buzo Star','2020-11-20','La \"estrella\" de todos nuestros buzos.',1);
+INSERT INTO `productos` VALUES (1,'BuzoKauri.jpeg','Buzo Kauri','2021-02-14','Buzo corto comodo para todas las estaciones , adorado por nuestros clientes.',1,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(2,'BuzoGema.jpeg','Buzo Gema','2021-02-14','Buzo sin capucha, perfecto para usar con todo.',2,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(3,'BuzoJade.jpeg','Buzo Jade','2020-12-25','Buzo oversize con estampa en la espalda \"Everyone knows my path better than I do\".',1,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(4,'BuzoAgata.jpeg','Buzo Agata','2021-03-16','Buzo sin capucha comodo y fresco, perfecto para estar en casa.',3,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(5,'BuzoAmbar.jpeg','Buzo Ambar','2020-11-20','Buzo claro con frase en la manga.',4,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(6,'BuzoArte.jpeg','Buzo Arte','2020-12-25','Buzo que hace referencia a su nombre, original y el mas elegido.',5,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(7,'BuzoBonnie.jpeg','Buzo Bonnie','2021-02-14','Buzo liso oscuro con capucha.',5,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(8,'BuzoDiana.jpeg','Buzo Diana','2020-12-25','Buzo liso corto blanco, totalmente combinable.',3,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(9,'BuzoJackie.jpeg','Buzo Jackie','2021-03-16','Buzo unico verde \"Rusty\".',2,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(10,'Buzo.jpeg','Buzo Star','2020-11-20','La \"estrella\" de todos nuestros buzos.',1,'2021-06-19 15:37:37','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-24 11:04:44
+-- Dump completed on 2021-06-19 12:41:44
