@@ -10,8 +10,8 @@ let loginController = {
     },
     login: function(req, res){
         // Buscar el usuario que se quiere loguear.
-        db.Usuarios.findOne({
-            where: [{email: req.body.email}]
+        user.findOne({
+            where: {email: req.body.email}
         })
         .then( user => {
             req.session.user = user;
@@ -20,7 +20,7 @@ let loginController = {
 
             //Si tildó recordame => creamos la cookie.
             if(req.body.rememberme != undefined){
-                res.cookie('userId', user.id, { maxAge: 1000 * 60 * 5})
+                res.cookie('user_id', user.id, { maxAge: 1000 * 60 * 5})
             }
 
             return res.redirect('/');
@@ -32,7 +32,7 @@ let loginController = {
     },
     logout: function(req,res){
         req.session.destroy();
-        res.clearCookie('userId');
+        res.clearCookie('user_id');
         return res.redirect('/')
     }
     
