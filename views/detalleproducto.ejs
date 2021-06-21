@@ -9,14 +9,13 @@
     
             <article class="container products-wrapper">
                 <h2 class= products-title ><%= listaBuzos.nombre_producto %> </h2>
-                <a href="/">Home</a>
                 <div class="products-wrap"> 
-                <p class="product-detail-description">
+               <!--  <p class="product-detail-description">
                 <p><%= listaBuzos.id %></p>
                 <img src="/images/<%= listaBuzos.image %>" alt="Buzo Ambar">
                 <p>Fecha de creación: <%= listaBuzos.fecha_creacion%></p>
                 <p>Comentario: <%= listaBuzos.comentario %></p>
-                    <a href="/productedit">Editar producto</a>
+                    <a href="/productedit">Editar producto</a> -->
          
                 <p class="product-detail-description">
                     <a href="/user">Agregar a mis productos</a>
@@ -27,63 +26,25 @@
             <div class="product-detail">
                 <div class="row">
                     <article class="col-12 col-lg-8 product-detail-info">
-                    <img src="<%= buzos[i].imagen %> " alt="" class="product-detail-img">
-                    <p class="product-detail-description">
-                        Buzo corto cómodo para todas las estaciones , adorado por nuestros clientes.</p>
-                                <p class= "product-detail-description" >Talle <a href="/buzos/talle/<%= buzos[i].talle%>"><%= buzos[i].talle%></a></p> 
-                                 <form class="form" action="" method="POST">
-                    </article>               
+                    <img src="/images/<%= listaBuzos.image %>" alt="" class="product-detail-img">
+                    <!-- <p class="product-detail-description">
+                        Buzo corto cómodo para todas las estaciones , adorado por nuestros clientes.</p> -->
+                                <p class= "product-detail-description" >
+                                <p>Fecha de creación: <%= listaBuzos.fecha_creacion%></p> <form class="form" action="" method="POST">
+                    <p>Descripcion: <%= listaBuzos.comentario %></p></article>               
                     <div class="col-12 col-lg-4">
                                         <section class="comments">
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="/">Sol: </a> </strong>
-                                                    Hermoso buzo, muy cómodo y fresco.</p>
+                                            <input class="form-input" type="text" value="" placeholder="Agregar comentario"> </section>
+                                  
                                                 </div>
-                                            </article>
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href= "/">Magali: </a> </strong>
-                                                    Buzo de muy buena calidad.</p>
-                                                </div>
-                                            </article>
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="/">Micalea: </a> </strong>
-                                                    Ideal para estar en casa!!</p>
-                                                </div>
-                                            </article>
-                                            <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="/">Pablo </a> </strong>
-                                                    El buzo muy lindo, me encanto.Quiero ver mas como este.</p>
-                                                </div>
-                                            </article>
-                                          <!--  <article>
-                                                <img src="https://via.placeholder.com/35" alt="">
-                                                <div class="data">
-                                                    <p class="user">
-                                                    <strong> <a href="user.ejs">Juan </a> </strong>
-                                                     Texto del comentario que escribió el usuario Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora doloribus enim aspernatur fugit corrupti suscipit sit dolore magnam, praesentium explicabo inventore molestias facilis labore. Fugit ipsa mollitia odit inventore consequuntur.</p>
-                                                </div>
-                                            </article>  -->
-                    <input class="form-input" type="text" value="" placeholder="Agregar comentario">
-                    <button type="submit" class="buy-now-button"> Agrega tu comentario</button>
+                                            </article> 
+                    
+                  <a href="/productedit">   <button type="submit" class="buy-now-button">Editar producto</button></a> 
                 </form> </div>
-            <!-- <iframe width="560" height="315" src='<%= buzos[i].imagen %>' title="Imagen del buzo"
-                    frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe> -->
-                
+          
+                    
             </article>
-        <% } %> 
+     
     
 
     </div>
