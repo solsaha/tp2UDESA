@@ -20,7 +20,7 @@ module.exports = function(sequielize, dataTypes){
         coment_text:{
             type: dataTypes.STRING,
         },
-        userId:{
+        user_id:{
             type: dataTypes.INTEGER,
         },
     }
