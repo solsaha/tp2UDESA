@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.20, for macos10.15 (x86_64)
 --
--- Host: 127.0.0.1    Database: proyectoIntegrador
+-- Host: localhost    Database: proyectoIntegrador
 -- ------------------------------------------------------
 -- Server version	5.7.32
 
@@ -25,13 +25,13 @@ DROP TABLE IF EXISTS `coments`;
 CREATE TABLE `coments` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `productId` int(10) unsigned NOT NULL,
-  `userId` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
   `coment_text` varchar(400) DEFAULT NULL,
   `fecha_creacion` date NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `userId` (`userId`),
+  KEY `userId` (`user_id`),
   KEY `productId` (`productId`),
-  CONSTRAINT `coments_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `usuarios` (`id`),
+  CONSTRAINT `coments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`),
   CONSTRAINT `coments_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `productos` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -59,12 +59,12 @@ CREATE TABLE `productos` (
   `nombre_producto` varchar(255) NOT NULL,
   `fecha_creacion` date NOT NULL,
   `comentario` varchar(400) DEFAULT NULL,
-  `userId` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
-  KEY `userId` (`userId`),
-  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `usuarios` (`id`)
+  KEY `userId` (`user_id`),
+  CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -74,7 +74,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (1,'BuzoKauri.jpeg','Buzo Kauri','2021-02-14','Buzo corto comodo para todas las estaciones , adorado por nuestros clientes.',1,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(2,'BuzoGema.jpeg','Buzo Gema','2021-02-14','Buzo sin capucha, perfecto para usar con todo.',2,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(3,'BuzoJade.jpeg','Buzo Jade','2020-12-25','Buzo oversize con estampa en la espalda \"Everyone knows my path better than I do\".',1,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(4,'BuzoAgata.jpeg','Buzo Agata','2021-03-16','Buzo sin capucha comodo y fresco, perfecto para estar en casa.',3,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(5,'BuzoAmbar.jpeg','Buzo Ambar','2020-11-20','Buzo claro con frase en la manga.',4,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(6,'BuzoArte.jpeg','Buzo Arte','2020-12-25','Buzo que hace referencia a su nombre, original y el mas elegido.',5,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(7,'BuzoBonnie.jpeg','Buzo Bonnie','2021-02-14','Buzo liso oscuro con capucha.',5,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(8,'BuzoDiana.jpeg','Buzo Diana','2020-12-25','Buzo liso corto blanco, totalmente combinable.',3,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(9,'BuzoJackie.jpeg','Buzo Jackie','2021-03-16','Buzo unico verde \"Rusty\".',2,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(10,'Buzo.jpeg','Buzo Star','2020-11-20','La \"estrella\" de todos nuestros buzos.',1,'2021-06-19 15:37:37','0000-00-00 00:00:00');
+INSERT INTO `productos` VALUES (1,'BuzoKauri.jpeg','Buzo Kauri','2021-02-14','Buzo corto comodo para todas las estaciones , adorado por nuestros clientes.',1,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(2,'BuzoGema.jpeg','Buzo Gema','2021-02-14','Buzo sin capucha, perfecto para usar con todo.',2,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(3,'BuzoJade.jpeg','Buzo Jade','2020-12-25','Buzo oversize con estampa en la espalda \"Everyone knows my path better than I do\".',1,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(4,'BuzoAgata.jpeg','Buzo Agata','2021-03-16','Buzo sin capucha comodo y fresco, perfecto para estar en casa.',3,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(5,'BuzoAmbar.jpeg','Buzo Ambar','2020-11-20','Buzo claro con frase en la manga.',4,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(6,'BuzoArte.jpeg','Buzo Arte','2020-12-25','Buzo que hace referencia a su nombre, original y el mas elegido.',5,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(7,'BuzoBonnie.jpeg','Buzo Bonnie','2021-02-14','Buzo liso oscuro con capucha.',5,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(8,'BuzoDiana.jpeg','Buzo Diana','2020-12-25','Buzo liso corto blanco, totalmente combinable.',3,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(9,'BuzoJackie.jpeg','Buzo Jackie','2021-03-16','Buzo unico verde \"Rusty\".',2,'2021-06-19 15:37:37','0000-00-00 00:00:00'),(10,'BuzoStar.jpeg','Buzo Star','2020-11-20','La \"estrella\" de todos nuestros buzos.',1,'2021-06-22 20:18:17','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +93,7 @@ CREATE TABLE `usuarios` (
   `fechaDeNacimiento` date NOT NULL,
   `edad` varchar(3) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Sol','12345','ssaha@udesa.edu.ar','2001-08-06','19'),(2,'Magali','67890','mparra@udesa.edu.ar','2001-12-18','19'),(3,'Mica','889900','smica@udesa.edu.ar','2001-09-14','19'),(4,'Juan','111','juan@udesa.edu.ar','1999-05-28','22'),(5,'Pablo','90721','pablo@udesa.edu.ar','1999-02-25','22');
+INSERT INTO `usuarios` VALUES (1,'Sol','12345','ssaha@udesa.edu.ar','2001-08-06','19'),(2,'Magali','67890','mparra@udesa.edu.ar','2001-12-18','19'),(3,'Mica','889900','smica@udesa.edu.ar','2001-09-14','19'),(4,'Juan','111','juan@udesa.edu.ar','1999-05-28','22'),(5,'Pablo','90721','pablo@udesa.edu.ar','1999-02-25','22'),(6,'lore','$2a$10$hHFxb/w9d3VjWrIXA32g5eAYwTwP2RD0d6.UYizUE.S02LaLljHjS','mlo@gmail.com','2001-11-11','19'),(7,'usario01','$2a$10$NhduGWOlMjdwJ8VTbImDtegMDV0bGfWtXAq1wR1YTYbauOgAvbFD.','user02@udesa.edu','2001-02-21','20'),(8,'usario01','$2a$10$slYc/6eNr1LJNJA5CuSRte6URSsu3/BdDf1WpHtq0F3nap/8IajOO','user@udesa.edu','2000-02-21','21');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -115,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-19 12:41:44
+-- Dump completed on 2021-06-22 20:33:18
