@@ -14,6 +14,8 @@ let registerController = {
          
         let errors = {}
 
+        //return res.send (req.body)
+
         if(req.body.email == ""){
             errors.message = "El email es obligatorio";
             res.locals.errors = errors;
@@ -38,7 +40,7 @@ let registerController = {
                     } else {
                         // Si el email está libre recién ahora podemos guardar un usuario en la db
                         let user = {
-                        name : req.body.nombre,
+                        nombre : req.body.nombre,
                         email: req.body.email,
                         password: bcrypt.hashSync(req.body.password, 10), 
                         fechaDeNacimiento: req.body.nacimiento,
