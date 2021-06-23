@@ -23,6 +23,10 @@ const productController = {
             return res.render('productedit')
         },
 
+        add: function(req, res){
+            return res.render('producteditadd')
+        },
+
 
     store: function(req, res){
 // agregar buzo nuevo
@@ -49,7 +53,7 @@ const productController = {
         //Mostrar formulario de carga de buzos nuevos
         db.Productos.findAll()
             .then( data => {
-                return res.render('productedit', {listaBuzos: data});
+                return res.render('producteditadd', {listaBuzos: data});
             })
             .catch(error => {
                 console.log(error);
