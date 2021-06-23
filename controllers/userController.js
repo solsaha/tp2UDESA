@@ -4,9 +4,14 @@ const op = db.Sequelize.Op
 
 const userController = {
     show: function (req, res){
-         res.render('user')
-    }, 
-   
+        let id= req.params.id
+        db.Usuarios.findByPk(id)
+        .then (function(user){
+            return res.render('user', {profile: user}) 
+        })
+            .catch( e => {console.log (e)})
+        },
+    
     index: function(req, res){
     let id = req.params.id;
      db.Usuarios.findAll()
