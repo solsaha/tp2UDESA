@@ -19,52 +19,58 @@ const productController = {
             })
         },
 
-           store: function(req, res){
-    // guardar un buzo en el listado de buzos de un usuario
-            let buzo = {
-                id: listaBuzos.id,            
-                imagen: listaBuzos.image,
-                nombre_producto: listaBuzos.nombre_producto,
-                fecha_creacion: listaBuzos.fecha_creacion,
-                comentario: listaBuzos.comentario,
-                userId: listaBuzos.user_id,
-            }
-           
-            db.Buzo.create(buzo)
-                .then( (buzoCreado) => {
-            
-                    return res.redirect('/');
-                })
-                .catch(error => {
-                    console.log(error);
-                })
+        edit: function(req, res){
+            return res.render('productedit')
         },
+
+
+    store: function(req, res){
+// guardar un buzo en el listado de buzos de un usuario
+    let buzo = {
+        id: listaBuzos.id,            
+        imagen: listaBuzos.image,
+        nombre_producto: listaBuzos.nombre_producto,
+        fecha_creacion: listaBuzos.fecha_creacion,
+        comentario: listaBuzos.comentario,
+        userId: listaBuzos.user_id,
+    }
+    
+    db.Buzo.create(buzo)
+        .then( (buzoCreado) => {
+    
+            return res.redirect('/');
+        })
+        .catch(error => {
+            console.log(error);
+        })
+},
        
-        create: function(req, res){
-            //Mostrar formulario de carga de buzos nuevos
-            db.Productos.findAll()
-                .then( data => {
-                    return res.render('productedit', {listaBuzos: data});
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-        },
-        destroy: function(req, res){
-            let buzoABorrar = req.params.id;
-            
-            db.Buzo.destroy({
-                where: [
-                    {id : buzoABorrar}
-                ]
+    create: function(req, res){
+        //Mostrar formulario de carga de buzos nuevos
+        db.Productos.findAll()
+            .then( data => {
+                return res.render('productedit', {listaBuzos: data});
             })
-                .then( () => {
-                     return res.redirect('/');
-                })
-                .catch( error => { 
-                    console.log(error);
-                })
-        }
+            .catch(error => {
+                console.log(error);
+            })
+    },
+    destroy: function(req, res){
+        let buzoABorrar = req.params.id;
+        
+        db.Buzo.destroy({
+            where: [
+                {id : buzoABorrar}
+            ]
+        })
+            .then( () => {
+                    return res.redirect('/');
+            })
+            .catch( error => { 
+                console.log(error);
+            })
+    }
+
 
 }
 
