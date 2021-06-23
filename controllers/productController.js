@@ -25,7 +25,7 @@ const productController = {
 
 
     store: function(req, res){
-// guardar un buzo en el listado de buzos de un usuario
+// agregar buzo nuevo
     let buzo = {
         id: listaBuzos.id,            
         imagen: listaBuzos.image,
@@ -35,7 +35,7 @@ const productController = {
         userId: listaBuzos.user_id,
     }
     
-    db.Buzo.create(buzo)
+    db.Productos.create(buzo)
         .then( (buzoCreado) => {
     
             return res.redirect('/');
