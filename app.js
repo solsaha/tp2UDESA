@@ -36,7 +36,7 @@ app.use(session(
   // Antes de las rutas. Dejar disponible datos de sessión para todas las vistas
  app.use(function(req, res, next){
   if(req.session.user != undefined){
-     res.locals = req.session.user;
+     res.locals.user = req.session.user;
     
   } 
    return next(); //Clave para que el proceso siga adelante.  
@@ -54,7 +54,7 @@ app.use(session(
       req.session.user = user; //Estamos poniendo en session a toda la instancia del modelo. Debería ser solo user.dataValues.
        console.log('en cookie middleware');
       console.log(req.session.user);
-       res.locals = user; //Se corrije si usamos user.dataValues
+       res.locals.user = user; //Se corrije si usamos user.dataValues
        return next();
      })
      .catch( e => {console.log(e)})
