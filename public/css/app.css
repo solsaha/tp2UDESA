@@ -362,12 +362,18 @@ color: blanchedalmond;
 }
 
 .product-detail-description {
-  padding: 15px 15px 15px 40px;
-  font-size: 1.8em;
-  line-height: 1.5;
-  background-color: white;
-  width: 100%;
-  text-align: left;
+  background-color: black;
+  font-size: medium;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.product-detail-datos{
+  font-size: medium;
 }
 
 .product-detail-price {
@@ -378,6 +384,7 @@ color: blanchedalmond;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
+  font-size:medium;
 }
 .small {
   font-size: 1.8em;
@@ -419,6 +426,11 @@ color: blanchedalmond;
   border-radius: 8px;
   border: none;
   margin-bottom: 15px;
+
+ 
+
+  
+
 }
 
 .action-button {
