@@ -19,32 +19,15 @@ const productController = {
             })
         },
 
-       
-
-       
-        create: function(req, res){
-            //Mostrar formulario de carga de buzos
-            db.Productos.findAll()
-                .then( data => {
-                    return res.render('productedit', {listaBuzos: data});
-                })
-                .catch(error => {
-                    console.log(error);
-                })
-        },
-
-       /*  store: function(req, res){
-            
-            let data = req.body;
-            
-        
+           store: function(req, res){
+    // guardar un buzo en el listado de buzos de un usuario
             let buzo = {
-                id: data.id,            
-                imagen: data. image,
-                nombre_producto: data.nombre_producto,
-                fecha_creacion: data.release_date,
-                comentario: data.comentario,
-                userId: data.userId
+                id: listaBuzos.id,            
+                imagen: listaBuzos.image,
+                nombre_producto: listaBuzos.nombre_producto,
+                fecha_creacion: listaBuzos.fecha_creacion,
+                comentario: listaBuzos.comentario,
+                userId: listaBuzos.user_id,
             }
            
             db.Buzo.create(buzo)
@@ -56,7 +39,17 @@ const productController = {
                     console.log(error);
                 })
         },
-
+       
+        create: function(req, res){
+            //Mostrar formulario de carga de buzos nuevos
+            db.Productos.findAll()
+                .then( data => {
+                    return res.render('productedit', {listaBuzos: data});
+                })
+                .catch(error => {
+                    console.log(error);
+                })
+        },
         destroy: function(req, res){
             let buzoABorrar = req.params.id;
             
@@ -72,23 +65,6 @@ const productController = {
                     console.log(error);
                 })
         }
- */
-// const productController = {
-  
-//     show: function(req,res){
-//         //devuelve 1 buzo
-//         let id = req.params.id
-//         let listaBuzos = data.lista;
-//         let resultados = [];
-//         for(let i=0; i<listaBuzos.length; i++){
-//             if(listaBuzos[i].id == id){
-//                 resultados.push(listaBuzos[i]);
-//                 res.render('detalleproducto', {title: resultados[0].nombre  , buzos: resultados});
-//             }
-//         }
-//         res.render('detalleproducto')
-//     }
-    
 
 }
 
