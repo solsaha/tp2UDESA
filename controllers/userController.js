@@ -1,5 +1,5 @@
 //const { where } = require('sequelize/types');
-const { request } = require('../app');
+//const { request } = require('../app');
 const { Sequelize} = require ('../database/models');
 const db = require('../database/models');
 const op = db.Sequelize.Op
@@ -21,7 +21,7 @@ const userController = {
      }
 
      else{
-         db.Usuarios.findOne({
+        db.Usuarios.findOne({
             where:[{id:req.session.user.id}],
             include:[
                 {association:'buzos'},
@@ -29,9 +29,9 @@ const userController = {
             ]
          }) 
         .then(usuarioResultado => {
+            console.log(usuarioResultado);
             return res.render('user',{data:usuarioResultado})
         })
-
         .catch(error=>{
             console.log(error);
         })
