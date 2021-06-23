@@ -50,9 +50,16 @@
 				<ul class="right-navbar">
 					
 					<% if(locals.user){ %>
-						<form action="/login/logout" method="POST">
-						  <button type="submit">Logout</button>
-						</form>
+						<li><a href="/users">
+							Mi perfil <i class="fas fa-user"></i>
+						</a>
+						</li>
+						<li>
+							<form action="/login/logout" method="POST">
+								<button class="logout" type="submit">
+									Cerrar sesión <i class="fas fa-sign-in-alt"></i>
+								</button>
+							</form>
 					  <%} else {%>
 						<a href="/login">Ingresar <i class="far fa-address-card"></i></a>
 						<a href="/register">Registrate<i class="fas fa-sign-in-alt"></i></a>

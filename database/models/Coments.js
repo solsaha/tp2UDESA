@@ -32,13 +32,17 @@ module.exports = function(sequielize, dataTypes){
      
     const Coment = sequielize.define(alias, cols, config);
 
-   /*  Coments.associate = function(models){
-        Coments.hasMany(models.Productos,{
+    Coment.associate = function(models){
+        Coment.belongsTo(models.Productos,{
          as:'productos',
          foreignKey: 'productId'
-        })
-    } */
- 
+        });
+    Coment.belongsTo(models.Usuarios,{
+        as:'usuario',
+        foreignKey:'user_id'
+    })
+    } 
+ //el alias es lo que le sigue a models, Coment es de la linea 33
     
     return Coment;
     

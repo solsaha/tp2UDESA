@@ -29,7 +29,7 @@ CREATE TABLE `coments` (
   `coment_text` varchar(400) DEFAULT NULL,
   `fecha_creacion` date NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `userId` (`user_id`),
+  KEY `user_id` (`user_id`),
   KEY `productId` (`productId`),
   CONSTRAINT `coments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`),
   CONSTRAINT `coments_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `productos` (`id`)
@@ -63,7 +63,7 @@ CREATE TABLE `productos` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),
-  KEY `userId` (`user_id`),
+  KEY `user_id` (`user_id`),
   CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
