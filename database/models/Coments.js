@@ -23,6 +23,7 @@ module.exports = function(sequielize, dataTypes){
         user_id:{
             type: dataTypes.INTEGER,
         }, */
+        
     }
      let config = {
          table: 'coments',
