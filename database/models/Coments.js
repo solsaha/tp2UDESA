@@ -26,7 +26,7 @@ module.exports = function(sequielize, dataTypes){
     }
      let config = {
          table: 'coments',
-         timestamps: false, //Si la tabla no tiene los campos created_at y updated_at
+         timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
          underscored: false, //Si los nombres de las columnas en la db tienen guiones bajos en lougar de camelCase.
      }
      
