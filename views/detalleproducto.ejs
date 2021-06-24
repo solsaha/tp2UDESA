@@ -46,8 +46,10 @@
                                            
               </div>
               <section class= "botones">
-                <a class="buy-now-button" href="/product/add">Agregar buzo nuevo </button> </a> 
-             <a class="buy-now-button" href="/product/destroy"> Borrar producto </button></a> 
+                  <form action="/product/destroy/<%= listaBuzos.id %>" method="POST">
+                    <button type="submit" class="buy-now-button" > Borrar producto </button></a> </form> 
+                    <a class="buy-now-button" href="/product/add">Agregar buzo nuevo </button> </a>
+             
         </section>
            </div>
           

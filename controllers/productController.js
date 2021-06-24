@@ -99,16 +99,11 @@ db.Productos.findByPk(req.params.id)
             })
     },
     destroy: function (req, res) {
-        let listaBuzos = req.body;
-       /*  let buzo = {
-            image: listaBuzos.image,
-            nombre_producto: listaBuzos.nombre,
-            comentario: listaBuzos.descripcion,
-            user_id: req.session.user.id,
-        } */
-        db.Productos.destroy(listaBuzos, {
+        let buzoBorrar = req.params.id;
+      
+        db.Productos.destroy({
                 where: [{
-                    id: req.params.id 
+                    id: buzoBorrar 
                 }]
             })
             .then(() => {

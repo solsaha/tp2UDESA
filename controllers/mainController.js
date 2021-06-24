@@ -19,7 +19,7 @@ const mainController = {
          
         db.Productos.findAll({
            order: [
-               ['fecha_creacion', 'DESC']
+               ['created_at', 'DESC']
            ],
            limit: 5,
         })
