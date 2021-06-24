@@ -32,7 +32,7 @@
                     <!-- <p class="product-detail-description">
                         Buzo corto cómodo para todas las estaciones , adorado por nuestros clientes.</p> -->
                                 <article class= "product-detail-datos" >
-                                <p>Fecha de creación: <%= listaBuzos.fecha_creacion%></p> 
+                                <p>Fecha de creación: <%= listaBuzos.created_at%></p> 
                                 <p>Descripción: <%= listaBuzos.comentario %></p>
                                 </article>
                             </article>               
@@ -46,8 +46,10 @@
                                            
               </div>
               <section class= "botones">
-                    <a class="buy-now-button" href="/product/add">Agregar buzo nuevo </button> </a> 
-            <a class="buy-now-button" href="/product/destroy"> Borrar producto </button></a> 
+                  <form action="/product/destroy/<%= listaBuzos.id %>" method="POST">
+                    <button type="submit" class="buy-now-button" > Borrar producto </button></a> </form> 
+                    <a class="buy-now-button" href="/product/add">Agregar buzo nuevo </button> </a>
+             
         </section>
            </div>
           

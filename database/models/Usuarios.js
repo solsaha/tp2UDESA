@@ -10,28 +10,29 @@ module.exports = function(sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER,
         },
-        password:{
-            type: dataTypes.STRING,
-        },
         nombre:{
             type: dataTypes.STRING,
         },
-        fechaDeNacimiento:{
+        password:{
+            type: dataTypes.STRING,
+        },
+        email:{
+            type: dataTypes.STRING,
+        },
+        fecha_nacimiento:{
             type: dataTypes.DATE,
         },
     
         edad:{
             type: dataTypes.STRING,
         },
-        email:{
-            type: dataTypes.STRING,
-        },
-       created_at:{
-            type: dataTypes.DATE
+      
+         created_at:{
+            type: dataTypes.DATE,
         },
         updated_at:{
-            type: dataTypes.DATE
-        }, 
+            type: dataTypes.DATE,
+        },   
     }
 
     let config = {

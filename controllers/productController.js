@@ -74,7 +74,6 @@ db.Productos.findByPk(req.params.id)
             nombre_producto: listaBuzos.nombre,
             comentario: listaBuzos.descripcion,
             user_id: req.session.user.id,
-            fecha_creacion: 2021-06-24 ,
         }
 
         db.Productos.create(buzo)
@@ -100,11 +99,11 @@ db.Productos.findByPk(req.params.id)
             })
     },
     destroy: function (req, res) {
-        let buzoABorrar = req.params.id;
-
-        db.Buzo.destroy({
+        let buzoBorrar = req.params.id;
+      
+        db.Productos.destroy({
                 where: [{
-                    id: buzoABorrar
+                    id: buzoBorrar 
                 }]
             })
             .then(() => {

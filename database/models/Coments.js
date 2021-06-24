@@ -10,24 +10,27 @@ module.exports = function(sequielize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER,
         },
-        productId:{
+        product_id:{
             type: dataTypes.INTEGER,
-        },
-        fecha_creacion:{
-            type: dataTypes.DATE,
-        },
-    
-         coment_text:{
-            type: dataTypes.STRING,
         },
         user_id:{
             type: dataTypes.INTEGER,
         }, 
+        coment_text: {
+            type: dataTypes.STRING,
+        },
+           created_at: {
+            type: dataTypes.DATE,
+        },
+        updated_at: {
+            type: dataTypes.DATE,
+        },
+        
     }
      let config = {
          table: 'coments',
          timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
-         underscored: false, //Si los nombres de las columnas en la db tienen guiones bajos en lougar de camelCase.
+         underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lougar de camelCase.
      }
      
     const Coment = sequielize.define(alias, cols, config);
