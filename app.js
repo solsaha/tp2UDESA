@@ -11,7 +11,7 @@ const userEditRouter = require('./routes/useredit');
 const registerRouter = require ('./routes/register');
 const loginRouter = require ('./routes/login');
 const productRouter = require ('./routes/product');
-const productEditRouter = require ('./routes/productedit');
+//const productEditRouter = require ('./routes/productedit');
 //const db = require('./database/models');
 
 
@@ -72,7 +72,7 @@ app.use('/useredit', userEditRouter);
 app.use('/register', registerRouter); 
 app.use('/login', loginRouter);
 app.use('/product', productRouter);
-app.use('/productedit', productEditRouter);
+//app.use('/productedit', productEditRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

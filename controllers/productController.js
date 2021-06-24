@@ -30,13 +30,12 @@ const productController = {
 
     store: function(req, res){
 // agregar buzo nuevo
-    let buzo = {
-        id: listaBuzos.id,            
-        imagen: listaBuzos.image,
-        nombre_producto: listaBuzos.nombre_producto,
-        fecha_creacion: listaBuzos.fecha_creacion,
-        comentario: listaBuzos.comentario,
-        userId: listaBuzos.user_id,
+let listaBuzos = req.body;
+    let buzo = {            
+        image: listaBuzos.image,
+        nombre_producto: listaBuzos.nombre,
+        comentario: listaBuzos.descripcion,
+        user_id: req.session.user.id,
     }
     
     db.Productos.create(buzo)
