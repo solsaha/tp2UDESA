@@ -16,7 +16,7 @@ module.exports = function(sequelize, dataTypes){
         nombre:{
             type: dataTypes.STRING,
         },
-        fechaDeNacimiento:{
+        fecha_nacimiento:{
             type: dataTypes.DATE,
         },
     
