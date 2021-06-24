@@ -99,11 +99,11 @@ db.Productos.findByPk(req.params.id)
             })
     },
     destroy: function (req, res) {
-        let buzoABorrar = req.params.id;
+        let buzoAborrar = req.params.id;
 
-        db.Buzo.destroy({
+        db.Productos.destroy({
                 where: [{
-                    id: buzoABorrar
+                    id: buzoAborrar
                 }]
             })
             .then(() => {
