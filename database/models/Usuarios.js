@@ -10,34 +10,35 @@ module.exports = function(sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER,
         },
-        password:{
-            type: dataTypes.STRING,
-        },
         nombre:{
             type: dataTypes.STRING,
         },
-        fecha_nacimiento:{
+        password:{
+            type: dataTypes.STRING,
+        },
+        email:{
+            type: dataTypes.STRING,
+        },
+        fecha_de_nacimiento:{
             type: dataTypes.DATE,
         },
     
         edad:{
             type: dataTypes.STRING,
         },
-        email:{
-            type: dataTypes.STRING,
-        },
-       created_at:{
-            type: dataTypes.DATE
+      
+         created_at:{
+            type: dataTypes.DATE,
         },
         updated_at:{
-            type: dataTypes.DATE
-        },  
+            type: dataTypes.DATE,
+        },   
     }
 
     let config = {
         tableName: 'usuarios', 
         timestamps: true, //Si la tabla no tiene los campos created_at y updated_at
-        underscored: false, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.        
+        underscored: true, //Si los nombres de las columnas en la db tienen guiones bajos en lugar de camelCase.        
     }
 
    const Users = sequelize.define(alias, cols, config);
