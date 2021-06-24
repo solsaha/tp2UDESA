@@ -26,6 +26,12 @@ module.exports = function(sequelize, dataTypes){
         email:{
             type: dataTypes.STRING,
         },
+       /*  created_at:{
+            type: dataTypes.DATE
+        },
+        updated_at:{
+            type: dataTypes.DATE
+        }, */
     }
 
     let config = {

@@ -14,21 +14,15 @@
 			
 			
                 <article class="formulario">			
-                    <form action="/product/store" method="POST">
+                    <form action="/product/edit" method="POST">
                     
-                    <label class="form-label">Nombre del producto:</label>
-                    <input class="form-input" type=“text” name=“nombre-usuario”>
-                    <label class="form-label">Id del producto:</label>
-                    <input class="form-input" type=“number” name=“id”>
-                    <label class="form-label">Adjuntar imagen:</label>
-                    <input class="form-input" type="file" name="imagen">
-                    <label class="form-label">Comentarios:</label>
-                    <input class="form-input" type="text" name="categoria">
-                    <label class="form-label">Fecha de creación:</label>
-                    <input class="form-input" type="date" name="fecha-creacion">
-                    <label class="form-label">Id del usuario:</label>
-                    <input class="form-input" type="text" name="categoria">
-            
+                        <label class="form-label">Nombre del producto:</label>
+                        <input class="form-input" type="text" name="nombre" value="<%= listaBuzos.nombre_producto %> ">
+                        <label class="form-label">Adjuntar imagen:</label>
+                        <input class="form-input" type="file" name="image">
+                        <label class="form-label">Descripción:</label>
+                        <input class="form-input" type="text" name="descripcion" value="<%= listaBuzos.comentario %> ">
+                        <input type="hidden" name="id" value="<%= listaBuzos.id %> ">
                         <button class="login" type="submit">
                             Editar Buzo <i class="fas fa-sign-in-alt"></i>
                         </button>
