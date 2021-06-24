@@ -23,12 +23,12 @@ module.exports = function(sequelize, dataTypes){
         user_id:{
             type: dataTypes.INTEGER,
         },
-        created_at:{
-            type: dataTypes.DATE
+         created_at:{
+            type: dataTypes.DATE,
         },
         updated_at:{
-            type: dataTypes.DATE
-        },
+            type: dataTypes.DATE,
+        }, 
     }
 
     let config = {
