@@ -1,4 +1,3 @@
-
 const bcrypt = require('bcryptjs');
 const db = require('../database/models');
 const op = db.Sequelize.Op;
@@ -43,7 +42,7 @@ let registerController = {
                         nombre : req.body.nombre,
                         email: req.body.email,
                         password: bcrypt.hashSync(req.body.password, 10), 
-                        fechaDeNacimiento: req.body.nacimiento,
+                        fecha_nacimiento: req.body.nacimiento,
                         edad: req.body.edad, 
                         }
 

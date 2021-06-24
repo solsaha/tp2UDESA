@@ -29,6 +29,9 @@
 
 
 	</form>
+	<% if(locals.errors) {%>
+		<p class= “error”> <%= errors.message %> </p>
+	   <% } %>
 
 	</article>
 

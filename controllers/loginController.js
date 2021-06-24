@@ -14,17 +14,31 @@ let loginController = {
             where: {email: req.body.email},
         })
         .then( user => {
-            req.session.user = user;
-            console.log('en login controller');
-            console.log(req.session.user);
-
-            //Si tildó recordame => creamos la cookie.
-            if(req.body.rememberme != undefined){
-                res.cookie('user_id', user.id, { maxAge: 1000 * 60 * 5})
+            let errors = {}
+            if(user == null){
+                errors.message = "Email incorrecto.";
+                res.locals.errors = errors;
+                return res.render('login');
             }
+            else{
+                if(bcrypt.compareSync(req.body.contrasena, user.password))
+                {
+                    req.session.user = user;
+                    console.log('en login controller');
+                    console.log(req.session.user);
 
-            return res.redirect('/');
-            
+                    //Si tildó recordame => creamos la cookie.
+                    if(req.body.rememberme != undefined){
+                        res.cookie('user_id', user.id, { maxAge: 1000 * 60 * 5})
+                    }
+                    return res.redirect('/');
+                }else{
+                    errors.message = "Contraseña incorrecta.";
+                    res.locals.errors = errors;
+                    return res.render('login');
+                }
+            }
+                
         })
         .catch( e => {console.log(e)})
 
