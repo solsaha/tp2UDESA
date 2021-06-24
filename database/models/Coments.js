@@ -13,16 +13,15 @@ module.exports = function(sequielize, dataTypes){
         productId:{
             type: dataTypes.INTEGER,
         },
-        fecha_creacion:{
-            type: dataTypes.DATE,
-        },
-    
-       /*  coment_text:{
-            type: dataTypes.STRING,
-        },
         user_id:{
             type: dataTypes.INTEGER,
-        }, */
+        }, 
+         coment_text:{
+            type: dataTypes.STRING,
+        },
+        created_at:{
+            type: dataTypes.DATE,
+        },
     }
      let config = {
          table: 'coments',
