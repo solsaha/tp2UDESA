@@ -17,12 +17,12 @@ module.exports = function(sequielize, dataTypes){
             type: dataTypes.DATE,
         },
     
-       /*  coment_text:{
+         coment_text:{
             type: dataTypes.STRING,
         },
         user_id:{
             type: dataTypes.INTEGER,
-        }, */
+        }, 
     }
      let config = {
          table: 'coments',
