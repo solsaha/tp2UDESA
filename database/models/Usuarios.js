@@ -19,7 +19,7 @@ module.exports = function(sequelize, dataTypes){
         email:{
             type: dataTypes.STRING,
         },
-        fecha_de_nacimiento:{
+        fecha_nacimiento:{
             type: dataTypes.DATE,
         },
     
