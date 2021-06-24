@@ -13,6 +13,16 @@ const userController = {
         })
             .catch( e => {console.log (e)})
         },
+        prod: function(req, res){
+            let id = req.params.id;
+             db.Productos.findAll()
+                 .then( data => {
+                     return res.render('index', { title : 'Productos' , listaBuzos : data});
+                 })
+                 .catch(error =>{
+                     console.log(error);
+                 })
+             },
     
     index: function(req, res){
     //let id = req.params.id;
@@ -36,13 +46,7 @@ const userController = {
             console.log(error);
         })
     }
-     //db.Usuarios.findAll()
-      //   .then( data => {
-        //     return res.render('user', { title : 'Usuarios' , listaBuzos : data});
-      //   })
-      //   .catch(error =>{
-     //        console.log(error);
-     //    })
-    }  
+}
+    
 }
 module.exports = userController ;

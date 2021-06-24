@@ -16,9 +16,11 @@
                 <p>Fecha de creación: <%= listaBuzos.fecha_creacion%></p>
                 <p>Comentario: <%= listaBuzos.comentario %></p>
                     <a href="/productedit">Editar producto</a> -->
+                        
                     <p class="product-detail-description">
-                        <a href="/product/add">Agregar buzo nuevo</a>
-                   </p>
+                      <a  href="/product/edit/<%=listaBuzos.id%> "> Editar producto </a> 
+                    </p>
+                  
                
                </div>
             </article>
@@ -26,7 +28,7 @@
             <div class="product-detail">
                 <div class="row">
                     <article class="col-12 col-lg-8 product-detail-info">
-                    <img src="/images/<%= listaBuzos.image %>" alt="" class="product-detail-img">
+                    <img src="/images/buzos/<%= listaBuzos.image %>" alt="" class="product-detail-img">
                     <!-- <p class="product-detail-description">
                         Buzo corto cómodo para todas las estaciones , adorado por nuestros clientes.</p> -->
                                 <article class= "product-detail-datos" >
@@ -37,15 +39,17 @@
                     <div class="col-12 col-lg-4">
                                         <section class="comments">
                                             <input class="form-input" type="text" value="" placeholder="Agregar comentario"> </section>
+                                            
                                   
                                                 </div>
                                             </article> 
                                            
-              
-                  <a class="buy-now-button" href="/product/edit/<%=listaBuzos.id%> "> Editar producto </button></a> 
-                </form> </div>
-                <a class="buy-now-button" href="/product/destroy"> Borrar producto </button></a> 
-            </form> </div>
+              </div>
+              <section class= "botones">
+                    <a class="buy-now-button" href="/product/add">Agregar buzo nuevo </button> </a> 
+            <a class="buy-now-button" href="/product/destroy"> Borrar producto </button></a> 
+        </section>
+           </div>
           
                     
             </article>
