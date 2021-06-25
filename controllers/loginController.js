@@ -21,7 +21,7 @@ let loginController = {
                     res.locals.errors = errors;
                     return res.render('login');
                 }
-                else if(bcrypt.compareSync(req.body.contrasena, user.password == false) ){
+                else if(bcrypt.compareSync(req.body.contrasena, user.password )== false ){
                       //mensaje de error
                     errors.message = "Contraseña incorrecta"
                     res.locals.errors = errors ;
