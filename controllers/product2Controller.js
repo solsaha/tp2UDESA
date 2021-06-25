@@ -20,16 +20,6 @@ const productController = {
                 console.log(error);
             })
     },
-    /* index: function(req, res){
-        let id = req.params.id;
-         db.Coments.findAll()
-             .then( data => {
-                 return res.render('detalleproducto', { title : 'Comentarios' , Comentarios : data});
-             })
-             .catch(error =>{
-                 console.log(error);
-             })
-     }  , */
 
     edit: function (req, res) {
 db.Productos.findByPk(req.params.id)
@@ -70,11 +60,11 @@ db.Productos.findByPk(req.params.id)
         // agregar buzo nuevo
         let listaBuzos = req.body;
         let buzo = {
-            image: req.avatar,
+            image: req.file.filename,
             nombre_producto: listaBuzos.nombre,
             comentario: listaBuzos.descripcion,
-          
-            
+            user_id: req.session.user.id,
+            fecha_creacion: 2021-06-24 ,
         }
 
         db.Productos.create(buzo)
@@ -100,11 +90,11 @@ db.Productos.findByPk(req.params.id)
             })
     },
     destroy: function (req, res) {
-        let buzoBorrar = req.params.id;
-      
-        db.Productos.destroy({
+        let buzoABorrar = req.params.id;
+
+        db.Buzo.destroy({
                 where: [{
-                    id: buzoBorrar 
+                    id: buzoABorrar
                 }]
             })
             .then(() => {
