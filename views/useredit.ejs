@@ -10,7 +10,8 @@
 					<h2 class="products-title">Editar usuario</h2>
 				</div>
 <article class="formulario">			
-	<form action="/useredit" method="POST">
+	<img class="avatar" src="/images/avatar/<%= user.avatar %> " alt="">
+    <form action="/useredit" method="POST" enctype="multipart/form-data">
 	<li>
 	<label class="form-label">Cambiar nombre</label>
 	<input class="form-input" type=“text” name=“nombreUsuario”>

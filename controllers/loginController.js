@@ -8,39 +8,37 @@ let loginController = {
         //Mostramos el form de login
         return res.render('login');
     },
-    login: function(req, res){
-        // Buscar el usuario que se quiere loguear.
-        user.findOne({
-            where: {email: req.body.email},
-        })
-        .then( user => {
-            let errors = {}
-            if(user == null){
-                errors.message = "Email incorrecto.";
-                res.locals.errors = errors;
-                return res.render('login');
-            }
-            else{
-                if(bcrypt.compareSync(req.body.contrasena, user.password))
-                {
+  
+        login: function(req, res){
+            // Buscar el usuario que se quiere loguear.
+            user.findOne({
+                where: {email: req.body.email},
+            })
+            .then( user => {
+                let errors = {}
+                if(user == null){
+                    errors.message = "Email incorrecto";
+                    res.locals.errors = errors;
+                    return res.render('login');
+                }
+                else if(bcrypt.compareSync(req.body.contrasena, user.password == false) ){
+                      //mensaje de error
+                    errors.message = "Contraseña incorrecta"
+                    res.locals.errors = errors ;
+                    return res.redirect('login');
+                } else {
                     req.session.user = user;
-                    console.log('en login controller');
                     console.log(req.session.user);
-
+                    
                     //Si tildó recordame => creamos la cookie.
                     if(req.body.rememberme != undefined){
                         res.cookie('user_id', user.id, { maxAge: 1000 * 60 * 5})
                     }
-                    return res.redirect('/');
-                }else{
-                    errors.message = "Contraseña incorrecta.";
-                    res.locals.errors = errors;
-                    return res.render('login');
+                    return res.redirect('/');        
                 }
-            }
-                
-        })
-        .catch( e => {console.log(e)})
+                    
+            })
+            .catch( e => {console.log(e)})
 
 
     },

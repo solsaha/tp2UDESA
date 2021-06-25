@@ -10,12 +10,6 @@
             <article class="container products-wrapper">
                 <h2 class= products-title ><%= listaBuzos.nombre_producto %> </h2>
                 <div class="products-wrap"> 
-               <!--  <p class="product-detail-description">
-                <p><%= listaBuzos.id %></p>
-                <img src="/images/<%= listaBuzos.image %>" alt="Buzo Ambar">
-                <p>Fecha de creación: <%= listaBuzos.fecha_creacion%></p>
-                <p>Comentario: <%= listaBuzos.comentario %></p>
-                    <a href="/productedit">Editar producto</a> -->
                         
                     <p class="product-detail-description">
                       <a  href="/product/edit/<%=listaBuzos.id%> "> Editar producto </a> 
@@ -29,8 +23,7 @@
                 <div class="row">
                     <article class="col-12 col-lg-8 product-detail-info">
                     <img src="/images/buzos/<%= listaBuzos.image %>" alt="" class="product-detail-img">
-                    <!-- <p class="product-detail-description">
-                        Buzo corto cómodo para todas las estaciones , adorado por nuestros clientes.</p> -->
+          
                                 <article class= "product-detail-datos" >
                                 <p>Fecha de creación: <%= listaBuzos.created_at%></p> 
                                 <p>Descripción: <%= listaBuzos.comentario %></p>
@@ -38,6 +31,7 @@
                             </article>               
                     <div class="col-12 col-lg-4">
                                         <section class="comments">
+                                    
                                             <input class="form-input" type="text" value="" placeholder="Agregar comentario"> </section>
                                             
                                   

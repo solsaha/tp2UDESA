@@ -74,6 +74,7 @@ db.Productos.findByPk(req.params.id)
             nombre_producto: listaBuzos.nombre,
             comentario: listaBuzos.descripcion,
             user_id: req.session.user.id,
+            
         }
 
         db.Productos.create(buzo)
