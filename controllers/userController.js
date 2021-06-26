@@ -1,5 +1,6 @@
 //const { where } = require('sequelize/types');
 //const { request } = require('../app');
+const bcrypt = require('bcryptjs');
 const { Sequelize} = require ('../database/models');
 const db = require('../database/models');
 const op = db.Sequelize.Op
@@ -46,7 +47,24 @@ const userController = {
             console.log(error);
         })
     }
-}
-    
-}
-module.exports = userController ;
+},
+        editar: function (req, res){
+            console.log(req.body);
+            db.Usuarios.update ({
+                    nombre : req.body.nombreUsuario,
+                    email: req.body.mail,
+                    password: bcrypt.hashSync(req.body.contrasena, 10), 
+                    fecha_nacimiento: req.body.nacimiento,
+            },
+            {where:{id:req.session.user.id}})
+
+            .then( user => {
+                return res.redirect('/users')
+            })
+            .catch(e => {console.log(e)});
+        },  
+        mostrarForm: function (req, res){
+            res.render('useredit')
+        }, 
+        }
+ module.exports = userController ;

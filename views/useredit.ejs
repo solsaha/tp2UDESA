@@ -11,21 +11,20 @@
 				</div>
 <article class="formulario">			
 	<img class="avatar" src="/images/avatar/<%= user.avatar %> " alt="">
-    <form action="/useredit" method="POST" enctype="multipart/form-data">
+    <form action="/users/edit" method="POST" >
 	<li>
 	<label class="form-label">Cambiar nombre</label>
-	<input class="form-input" type=“text” name=“nombreUsuario”>
+	<input class="form-input" type=“text” name="nombreUsuario" value="<%= user.nombre %>">
 	<label class="form-label">Cambiar email  </label>
-	<input class="form-input" type=“email” name=“mail”>
+	<input class="form-input" type=“email” name="mail" value="<%= user.email %>">
 	<label class="form-label">Modificar fecha de nacimiento</label>
-	<input class="form-input" type="date" name="nacimiento">
+	<input class="form-input" type="date" name="nacimiento" value="<%= user.fecha_nacimiento %>">
 	<label class="form-label">Cambiar contraseña:</label>
 	<input class="form-input" type="password" name="contrasena">
-	<form action="" method="post">
-		<button class="login" type="submit">
-			Change <i class="fas fa-sign-in-alt"></i>
-		</button>
-	</form>
+	
+	<button class="login" type="submit">
+		Change <i class="fas fa-sign-in-alt"></i>
+	</button>
 </li> 
 
 </form>

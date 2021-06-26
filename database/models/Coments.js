@@ -38,7 +38,7 @@ module.exports = function(sequielize, dataTypes){
     Coment.associate = function(models){
         Coment.belongsTo(models.Productos,{
          as:'productos',
-         foreignKey: 'productId'
+         foreignKey: 'product_id'
         });
     Coment.belongsTo(models.Usuarios,{
         as:'usuario',

@@ -7,7 +7,6 @@ const session = require('express-session');
 
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
-const userEditRouter = require('./routes/useredit');
 const registerRouter = require ('./routes/register');
 const loginRouter = require ('./routes/login');
 const productRouter = require ('./routes/product');
@@ -66,7 +65,6 @@ app.use(session(
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
-app.use('/useredit', userEditRouter);
 app.use('/register', registerRouter); 
 app.use('/login', loginRouter);
 app.use('/product', productRouter);

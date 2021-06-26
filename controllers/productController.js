@@ -9,9 +9,15 @@ const productController = {
     show: function (req, res) {
         let id = req.params.id;
 
-        db.Productos.findByPk(id)
+        db.Productos.findOne(
+            {include:[{association: "comentarios"}]},
+            {where:[
+                {id:req.params.id}
+            ]},
+            
+            )
             .then(data => {
-
+                console.log(data)
                 return res.render('detalleproducto', {
                     listaBuzos: data
                 });
@@ -32,7 +38,7 @@ const productController = {
      }  , */
 
     edit: function (req, res) {
-db.Productos.findByPk(req.params.id)
+        db.Productos.findByPk(req.params.id)
 .then((data)=> {
     return res.render('productedit', {listaBuzos: data})
 })
