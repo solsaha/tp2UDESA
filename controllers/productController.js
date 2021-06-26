@@ -74,7 +74,7 @@ db.Productos.findByPk(req.params.id)
         // agregar buzo nuevo
         let listaBuzos = req.body;
         let buzo = {
-            image: listaBuzos.avatar,
+            image: req.file.filename,
             nombre_producto: listaBuzos.nombre,
             comentario: listaBuzos.descripcion,
         }
