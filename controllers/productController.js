@@ -44,6 +44,9 @@ db.Productos.findByPk(req.params.id)
     },
 
     editStore: function (req, res) {
+        if(req.session.user == undefined){
+            return res.redirect('/register');
+        } else  {
         // agregar buzo nuevo
         let listaBuzos = req.body;
         let buzo = {
@@ -51,8 +54,8 @@ db.Productos.findByPk(req.params.id)
             nombre_producto: listaBuzos.nombre,
             comentario: listaBuzos.descripcion,
             user_id: req.session.user.id,
-        }
-
+        } 
+    
         db.Productos.update(buzo, {
                 where: {
                     id: req.body.id
@@ -65,16 +68,15 @@ db.Productos.findByPk(req.params.id)
             .catch(error => {
                 console.log(error);
             })
+        }
     },
     store: function (req, res) {
         // agregar buzo nuevo
         let listaBuzos = req.body;
         let buzo = {
-            image: req.avatar,
+            image: listaBuzos.avatar,
             nombre_producto: listaBuzos.nombre,
             comentario: listaBuzos.descripcion,
-          
-            
         }
 
         db.Productos.create(buzo)
@@ -88,16 +90,17 @@ db.Productos.findByPk(req.params.id)
     },
 
     create: function (req, res) {
+        if(req.session.user == undefined){
+            return res.redirect('/register');
+        } else {
         //Mostrar formulario de carga de buzos nuevos
         db.Productos.findAll()
-            .then(data => {
-                return res.render('producteditadd', {
-                    listaBuzos: data
-                });
+            .then(data => {return res.render('producteditadd', {listaBuzos: data});
             })
             .catch(error => {
                 console.log(error);
             })
+        }
     },
     destroy: function (req, res) {
         let buzoBorrar = req.params.id;
@@ -119,3 +122,6 @@ db.Productos.findByPk(req.params.id)
 }
 
 module.exports = productController;
+
+
+
