@@ -15,6 +15,17 @@ const mainController = {
             })
     }  ,
 
+    coment: function(req, res){
+        let id = req.params.id;
+         db.Productos.findAll()
+             .then( data => {
+                 return res.render('index', { title : 'Coments' , listaBuzos : data});
+             })
+             .catch(error =>{
+                 console.log(error);
+             })
+     }  ,
+
     new: function(req, res){
          
         db.Productos.findAll({
