@@ -40,7 +40,12 @@
                             </article>               
                     <div class="col-12 col-lg-4">
                                         <section class="comments">
-                                            <input class="form-input" type="text" value="" placeholder="Agregar comentario">
+                                            <% if(locals.user){ %>
+                                            <form action="/product/addComment/<%-listaBuzos.id%>" method="post">
+                                                <input name="coment_text" class="form-input" type="text" value="" placeholder="Agregar comentario">
+                                                <button class="form-control" type="submit">Agregar Comentario</button>
+                                            </form>
+                                            <% } %>
                                             <% for(let i=0; i<listaBuzos.comentarios.length; i++){ %>
                                                <p> <%= listaBuzos.comentarios[i].coment_text %></p>
                                             <% } %>

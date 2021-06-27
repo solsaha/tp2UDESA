@@ -102,7 +102,20 @@ const productController = {
                 console.log(error);
             })
     },
-
+    addComment: function (req,res) {
+        const {coment_text} = req.body;
+        const comentario = {
+                product_id: req.params.id,
+                user_id: req.session.user.id,
+                coment_text: coment_text
+        };
+        db.Coments.create(comentario).then((comentarioCreado) => {
+            return res.redirect(`/product/id/${req.params.id}`);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    },
     create: function (req, res) {
         if(req.session.user == undefined){
             return res.redirect('/register');
