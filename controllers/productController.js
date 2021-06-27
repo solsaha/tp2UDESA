@@ -21,7 +21,7 @@ const productController = {
             })
     },
  /*    comentario: 
-    unction (req, res) {
+    function (req, res) {
   
         db.Productos.findOne(
             {include:[{association: "comentarios"}]},

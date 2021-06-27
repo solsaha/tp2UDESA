@@ -92,6 +92,7 @@ CREATE TABLE `usuarios` (
   `email` varchar(200) NOT NULL,
   `fechaDeNacimiento` date NOT NULL,
   `edad` varchar(3) NOT NULL,
+  `imagen_perfil` varchar (200),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
