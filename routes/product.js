@@ -20,7 +20,9 @@ router.get ('/', productController.create);
 router.get ('/edit/:id', productController.edit);
 router.post ('/edit', productController.editStore);
 router.get ('/add', productController.add);
+
 router.post ('/add',upload.single('buzo'), productController.store);
+
 router.post ('/addComment/:id',productController.addComment);
 router.post ('/destroy/:id', productController.destroy);
 
