@@ -12,7 +12,7 @@
                 <div class="products-wrap"> 
                         
                     <p class="product-detail-description">
-                      <a  href="/product/edit/<%=listaBuzos.id%> "> Editar producto </a> 
+                      <a  href="/product/edit/<%=listaBuzos.id%>"> Editar producto </a> 
                     </p>
                   
                
@@ -32,8 +32,8 @@
                     <div class="col-12 col-lg-4">
                                         <section class="comments">
                                             <input class="form-input" type="text" value="" placeholder="Agregar comentario">
-                                            <% for(let i=0; i<listaBuzos.comentarios.length; i++){ %>
-                                               <p> <%= listaBuzos.comentarios[i].coment_text %></p>
+                                            <% for(let i=0; i<listaBuzos.length; i++){ %>
+                                               <p> <%= listaBuzos.length[i].coment_text %></p>
                                             <% } %>
                                          </section>
                                             

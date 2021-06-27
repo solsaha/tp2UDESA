@@ -8,14 +8,14 @@ const op = db.Sequelize.Op
 const productController = {
     show: function (req, res) {
         let id = req.params.id;
-
-        db.Productos.findOne(
+        db.Productos.findByPk(id)
+        /* db.Productos.findOne(
             {include:[{association: "comentarios"}]},
             {where:[
                 {id:req.params.id}
             ]},
             
-            )
+            ) */
             .then(data => {
                 console.log(data)
                 return res.render('detalleproducto', {
@@ -26,17 +26,7 @@ const productController = {
                 console.log(error);
             })
     },
-    /* index: function(req, res){
-        let id = req.params.id;
-         db.Coments.findAll()
-             .then( data => {
-                 return res.render('detalleproducto', { title : 'Comentarios' , Comentarios : data});
-             })
-             .catch(error =>{
-                 console.log(error);
-             })
-     }  , */
-
+    
     edit: function (req, res) {
         db.Productos.findByPk(req.params.id)
 .then((data)=> {
