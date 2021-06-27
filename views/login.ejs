@@ -16,7 +16,7 @@
 	<input class="form-input" type="email" name="email" value="">
 	
 	<label class="form-label">Contraseña:</label>
-	<input class="form-input" type="password" name="contrasena" value="">
+	<input class="form-input" type="password" name="password" value="">
 
 	<label class="form-label">Recordame:</label>
 	<input type="checkbox" name="rememberme" value="ok">
@@ -30,7 +30,7 @@
 
 	</form>
 	<% if(locals.errors) {%>
-		<p class= “error”> <%= errors.message %> </p>
+		<alert class= “error”> <%= errors.message %> </alert>
 	   <% } %>
 
 	</article>
