@@ -9,13 +9,7 @@ const productController = {
     show: function (req, res) {
         let id = req.params.id;
         db.Productos.findByPk(id)
-        /* db.Productos.findOne(
-            {include:[{association: "comentarios"}]},
-            {where:[
-                {id:req.params.id}
-            ]},
-            
-            ) */
+     
             .then(data => {
                 console.log(data)
                 return res.render('detalleproducto', {
@@ -26,6 +20,16 @@ const productController = {
                 console.log(error);
             })
     },
+ /*    comentario: 
+    unction (req, res) {
+  
+        db.Productos.findOne(
+            {include:[{association: "comentarios"}]},
+            {where:[
+                {id:req.params.id}
+            ]},
+            
+            )  */
     
     edit: function (req, res) {
         db.Productos.findByPk(req.params.id)
