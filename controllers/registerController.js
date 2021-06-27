@@ -44,6 +44,7 @@ let registerController = {
                         password: bcrypt.hashSync(req.body.password, 10), 
                         fecha_nacimiento: req.body.nacimiento,
                         edad: req.body.edad, 
+                        imagen_perfil:req.file.filename
                         }
 
                         users.create(user)

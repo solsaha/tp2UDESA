@@ -26,6 +26,9 @@ module.exports = function(sequelize, dataTypes){
         edad:{
             type: dataTypes.STRING,
         },
+        imagen_perfil:{
+            type: dataTypes.STRING,
+        },
       
         created_at:{
             type: dataTypes.DATE,
