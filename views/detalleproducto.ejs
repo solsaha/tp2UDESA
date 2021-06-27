@@ -12,8 +12,15 @@
                 <div class="products-wrap"> 
                         
                     <section class="product-detail-description">
+                        <% if(locals.user){ %>
+    
+                            <a  href="/product/edit/<%=listaBuzos.id%>"> Editar producto </a> 
+
+                                  <%} else {%>
+                                    <a  href="/login"> Loggin/regist para editar </a> 
+                                      <%}%>
                         
-                      <a  href="/product/edit/<%=listaBuzos.id%>"> Editar producto </a> 
+                    
                     
                     </section>
                   
