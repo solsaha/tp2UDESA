@@ -23,16 +23,25 @@ const productController = {
     },
 
     
-    edit: function (req, res) {
-        db.Productos.findByPk(req.params.id)
-.then((data)=> {
-    return res.render('productedit', {listaBuzos: data})
-})
-    
-    },
+    store: function (req, res) {
+        // agregar buzo nuevo
+       
+        let listaBuzos = req.body;
+        let buzo = {
+            image: req.file.filename,
+            nombre_producto: listaBuzos.nombre,
+            comentario: listaBuzos.descripcion,
+            user_id: req.session.user.id,
+        }
 
-    add: function (req, res) {
-        return res.render('producteditadd')
+        db.Productos.create(buzo)
+            .then((buzoCreado) => {
+
+                return res.redirect('/');
+            })
+            .catch(error => {
+                console.log(error);
+            })
     },
 
     editStore: function (req, res) {
@@ -62,26 +71,14 @@ const productController = {
             })
         }
     },
-    store: function (req, res) {
-        // agregar buzo nuevo
-       
-        let listaBuzos = req.body;
-        let buzo = {
-            image: req.file.filename,
-            nombre_producto: listaBuzos.nombre,
-            comentario: listaBuzos.descripcion,
-            user_id: req.session.user.id,
-        }
-
-        db.Productos.create(buzo)
-            .then((buzoCreado) => {
-
-                return res.redirect('/');
-            })
-            .catch(error => {
-                console.log(error);
-            })
+    edit: function (req, res) {
+        db.Productos.findByPk(req.params.id)
+.then((data)=> {
+    return res.render('productedit', {listaBuzos: data})
+})
+    
     },
+    
     addComment: function (req,res) {
         const {coment_text} = req.body;
         const comentario = {
@@ -108,6 +105,9 @@ const productController = {
                 console.log(error);
             })
         }
+    },
+    add: function (req, res) {
+        return res.render('producteditadd')
     },
     destroy: function (req, res) {
         let buzoBorrar = req.params.id;
