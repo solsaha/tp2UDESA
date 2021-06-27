@@ -72,6 +72,7 @@ const productController = {
     },
     store: function (req, res) {
         // agregar buzo nuevo
+        
         let listaBuzos = req.body;
         let buzo = {
             image: req.file.filename,

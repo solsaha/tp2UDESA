@@ -48,5 +48,5 @@ module.exports = function(sequielize, dataTypes){
  //el alias es lo que le sigue a models, Coment es de la linea 33
     
     return Coment;
-    
+     
     }
