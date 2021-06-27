@@ -32,7 +32,7 @@ const mainController = {
            order: [
                ['created_at', 'DESC']
            ],
-           limit: 5,
+        
         })
             .then(data =>{
                 return res.render('index', {listaBuzos: data, title: 'Novedades'})
