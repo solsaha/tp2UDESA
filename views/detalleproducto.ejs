@@ -40,10 +40,11 @@
                             </article>               
                     <div class="col-12 col-lg-4">
                                         <section class="comments">
+                                            <h1>Comentarios</h1>
                                             <% if(locals.user){ %>
                                             <form action="/product/addComment/<%-listaBuzos.id%>" method="post">
                                                 <input name="coment_text" class="form-input" type="text" value="" placeholder="Agregar comentario">
-                                                <button class="form-control" type="submit">Agregar Comentario</button>
+                                                <button class="form-control buy-now-button" type="submit">Agregar Comentario</button>
                                             </form>
                                             <% } %>
                                             <% for(let i=0; i<listaBuzos.comentarios.length; i++){ %>
