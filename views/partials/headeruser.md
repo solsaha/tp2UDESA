@@ -62,3 +62,6 @@
 		</div>
 	</header>
 	<!-- /Header -->
+
+		<a href="/login">Ingresar <i class="far fa-address-card"></i></a>
+		<a href="/register">Registrate<i class="fas fa-sign-in-alt"></i></a>

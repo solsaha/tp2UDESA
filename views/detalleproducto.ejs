@@ -11,9 +11,11 @@
                 <h2 class= products-title ><%= listaBuzos.nombre_producto %> </h2>
                 <div class="products-wrap"> 
                         
-                    <p class="product-detail-description">
+                    <section class="product-detail-description">
+                        
                       <a  href="/product/edit/<%=listaBuzos.id%>"> Editar producto </a> 
-                    </p>
+                    
+                    </section>
                   
                
                </div>
@@ -41,12 +43,15 @@
                                                 </div>
                                             </article> 
                                            
+                                           
               </div>
+              <% if(locals.user){ %>
               <section class= "botones">
                   <form action="/product/destroy/<%= listaBuzos.id %>" method="POST">
-                    <button type="submit" class="buy-now-button" > Borrar producto </button></a> </form> 
+                    <a type="submit" class="buy-now-button" > Borrar producto </button></a> </form> 
                     <a class="buy-now-button" href="/product/add">Agregar buzo nuevo </button> </a>
-             
+                    <%} else {%>
+                        <%}%>
         </section>
            </div>
           
