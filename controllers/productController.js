@@ -1,6 +1,6 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
-const user = db.Usuarios;
+//const user = db.Usuarios;
 
 
 
@@ -78,6 +78,8 @@ const productController = {
     },
     
     addComment: function (req,res) {
+        console.log(req.body);
+        //let comentario = req.body.coment_text
         const {coment_text} = req.body;
         const comentario = {
                 product_id: req.params.id,
