@@ -1,7 +1,6 @@
-//const { where } = require('sequelize/types');
-//const { request } = require('../app');
+
+
 const bcrypt = require('bcryptjs');
-const { Sequelize} = require ('../database/models');
 const db = require('../database/models');
 const op = db.Sequelize.Op
 
