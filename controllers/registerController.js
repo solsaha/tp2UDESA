@@ -13,7 +13,7 @@ let registerController = {
          
         let errors = {}
 
-        //return res.send (req.body)
+
 
         if(req.body.email == ""){
             errors.message = "El email es obligatorio";
@@ -26,7 +26,7 @@ let registerController = {
             return res.render('register')
          //Chequear que repetir contraseña no esté vacío   
         } else {
-            //Buscamos un usaurio en base al email ingresado.
+            //Buscamos un usuario en base al email ingresado.
             users.findOne({
                 where: [{email: req.body.email}]
             })

@@ -43,10 +43,10 @@ app.use(session(                                             //<--
  //Gestionar la coockie.
  app.use(function(req, res, next){
    //Solo quiero hacerlo si tengo una coockie
-   if(req.cookies.userId != undefined && req.session.user == undefined){
+   if(req.cookies.user_id != undefined && req.session.user == undefined){
      let idDeLaCookie = req.cookies.userId;
     
-    db.User.findByPk(idDeLaCookie)
+    db.Usuarios.findByPk(idDeLaCookie)
      .then( user => {
        console.log('en cookie middleware trasladando');
       req.session.user = user; //Estamos poniendo en session a toda la instancia del modelo. Debería ser solo user.dataValues.
