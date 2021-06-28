@@ -1,22 +1,21 @@
-//const { where } = require('sequelize/types');
-//const { request } = require('../app');
+
+
 const bcrypt = require('bcryptjs');
-const { Sequelize} = require ('../database/models');
 const db = require('../database/models');
 const op = db.Sequelize.Op
 
 const userController = {
     show: function (req, res){
         let id= req.params.id
-        db.Usuarios.findByPk(id) //busco el usuario en la bd x id
+        db.Usuarios.findByPk(id) 
         .then (function(user){ 
-            return res.render('user', {profile: user}) //cargo la vista user con la variable profile con el usuario cargado
+            return res.render('user', {profile: user}) 
         })
             .catch( e => {console.log (e)})
         },
         prod: function(req, res){
             let id = req.params.id;
-             db.Productos.findAll() //busco los productos de la bd
+             db.Productos.findAll() 
                  .then( data => {
                      return res.render('index', { title : 'Productos' , listaBuzos : data});
                  })
@@ -26,12 +25,12 @@ const userController = {
              },
     
     index: function(req, res){
-     if(req.session.user == undefined){ //valido que el usuario este logeado
+     if(req.session.user == undefined){ 
          return res.render('login')
      }
 
      else{
-        db.Usuarios.findOne({ //obtengo el usuario de la bd junto sus productos y  comentarios asociados
+        db.Usuarios.findOne({ 
             where:[{id:req.session.user.id}],
             include:[
                 {association:'buzos'},
@@ -40,7 +39,7 @@ const userController = {
          }) 
         .then(usuarioResultado => {
             console.log(usuarioResultado);
-            return res.render('user',{data:usuarioResultado}) //cargo la vista de usuarios
+            return res.render('user',{data:usuarioResultado}) 
         })
         .catch(error=>{
             console.log(error);
@@ -49,7 +48,7 @@ const userController = {
 },
         editar: function (req, res){
             console.log(req.body);
-            db.Usuarios.update ({ //actualizo la entidad usuario con los datos del formulario
+            db.Usuarios.update ({ 
                     nombre : req.body.nombreUsuario,
                     email: req.body.mail,
                     password: bcrypt.hashSync(req.body.contrasena, 10), 
@@ -63,7 +62,7 @@ const userController = {
             .catch(e => {console.log(e)});
         },  
         mostrarForm: function (req, res){
-            res.render('useredit')//cargo la vista del perfil
+            res.render('useredit')
         }, 
         }
  module.exports = userController ;
