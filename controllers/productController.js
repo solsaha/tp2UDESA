@@ -45,9 +45,7 @@ const productController = {
     },
 
     editStore: function (req, res) {
-        if(req.session.user == undefined){
-            return res.redirect('/register');
-        } else  {
+       
         // editar el buzo ya cargado en la db
         let listaBuzos = req.body;
         let buzo = {
@@ -69,7 +67,7 @@ const productController = {
             .catch(error => {
                 console.log(error);
             })
-        }
+        
     },
     edit: function (req, res) {
         db.Productos.findByPk(req.params.id)
@@ -94,9 +92,7 @@ const productController = {
         })
     },
     create: function (req, res) {
-        if(req.session.user == undefined){
-            return res.redirect('/register');
-        } else {
+        
         //Mostrar formulario de carga de buzos nuevos
         db.Productos.findAll()
             .then(data => {return res.render('producteditadd', {listaBuzos: data});
@@ -104,7 +100,7 @@ const productController = {
             .catch(error => {
                 console.log(error);
             })
-        }
+        
     },
     add: function (req, res) {
         return res.render('producteditadd')
