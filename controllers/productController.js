@@ -24,8 +24,8 @@ const productController = {
 
     
     store: function (req, res) {
-        // agregar buzo nuevo
-       
+      
+         // agregar buzo nuevo
         let listaBuzos = req.body;
         let buzo = {
             image: req.file.filename,
@@ -48,7 +48,7 @@ const productController = {
         if(req.session.user == undefined){
             return res.redirect('/register');
         } else  {
-        // agregar buzo nuevo
+        // editar el buzo ya cargado en la db
         let listaBuzos = req.body;
         let buzo = {
             image: listaBuzos.image,
