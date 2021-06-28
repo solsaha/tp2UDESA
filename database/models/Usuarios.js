@@ -59,7 +59,7 @@ module.exports = function(sequelize, dataTypes){
         foreignKey:"user_id"
 
     })
-   } ; 
+   } ; //configuro la asociacion de productos y comentarios asociados al usuario
 
    return Users;
 }
