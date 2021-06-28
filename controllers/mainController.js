@@ -15,7 +15,7 @@ const mainController = {
             })
     }  ,
 
-    coment: function(req, res){
+    coment: function(req, res){ //descripción de los buzos
         let id = req.params.id;
          db.Productos.findAll()
              .then( data => {
