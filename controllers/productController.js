@@ -27,7 +27,7 @@ const productController = {
       
          // agregar buzo nuevo
         let listaBuzos = req.body;
-        let buzo = {
+        let buzo = { // va a recibir create
             image: req.file.filename,
             nombre_producto: listaBuzos.nombre,
             comentario: listaBuzos.descripcion,
